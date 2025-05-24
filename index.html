@@ -115,76 +115,146 @@
     </section>
 
     <section class="catalog container">
-        <h2>Каталог</h2>
-        <div class="catalog-blocks">
-         <div class="block-с-1">
-            <img class="img-home-1" src="img/16e23c2aed0d43fd8d1ae456e01abe4e.webp" width="300px" alt="">
-            <P class="catalog-price-1">12 985 000 pуб</P>
-        </div>
-        <div class="block-с-2">
-            <img class="img-home-2" src="img/4ba17f88f1ee4b4b891837a8fb45b6cf.webp" width="300px" alt="">
-            <P class="catalog-price-2">12 500 000 pуб</P>
-        </div>
-        <div class="block-с-3">
-            <img class="img-home-3" src="img/38c426869ec9473c830919f0fd36018e.webp" width="300px" height="225px" alt="">
-            <P class="catalog-price-3">49 000 000 pуб</P>
-        </div>
-        <div class="block-с-4">
-            <img class="img-home-4" src="img/ed3d8106dcab7eb6f0d8a1c82bf9f892509a1a40.webp" width="300px" height="225px" alt="">
-            <P class="catalog-price-4">10 485 000 pуб</P>
-        </div>   
-        </div>
+    <h2 class="catalog-title">Каталог</h2>
+    
+    <div class="property-grid">
+        <!-- Карточка 1 -->
+        <article class="property-card">
+            <div class="property-image-container">
+                <img src="img/16e23c2aed0d43fd8d1ae456e01abe4e.webp" 
+                     alt="Таунхаус в Калининграде" 
+                     class="property-image"
+                     width="300"
+                     height="225"
+                     loading="lazy">
+            </div>
+            <div class="property-details">
+                <p class="property-price">12 985 000 ₽</p>
+                <button class="property-button">Подробнее</button>
+            </div>
+        </article>
         
-        <button class="header-podrobnie-company">Посмотреть всё</button>
-        <h2>Хотите купить дом у нас?</h2>
-        <p class="catalog-p">Отправьте нам заявку и мы отправим вам <br> наши предложения</p>
-        <button class="header-podrobnie-company-b">Связаться</button>
-    </section>
+        <!-- Карточка 2 -->
+        <article class="property-card">
+            <div class="property-image-container">
+                <img src="img/4ba17f88f1ee4b4b891837a8fb45b6cf.webp" 
+                     alt="Таунхаус в Калининграде" 
+                     class="property-image"
+                     width="300"
+                     height="225"
+                     loading="lazy">
+            </div>
+            <div class="property-details">
+                <p class="property-price">12 500 000 ₽</p>
+                <button class="property-button">Подробнее</button>
+            </div>
+        </article>
+        
+        <!-- Карточка 3 -->
+        <article class="property-card">
+            <div class="property-image-container">
+                <img src="img/b2bbe4e.webp" 
+                     alt="Премиальный таунхаус в Калининграде" 
+                     class="property-image"
+                     width="300"
+                     height="225"
+                     loading="lazy">
+            </div>
+            <div class="property-details">
+                <p class="property-price">22 000 000 ₽</p>
+                <button class="property-button">Подробнее</button>
+            </div>
+        </article>
+
+        <!-- Карточка 4 -->
+        <article class="property-card">
+            <div class="property-image-container">
+                <img src="img/dbad321.webp" 
+                     alt="Премиальный таунхаус в Калининграде" 
+                     class="property-image"
+                     width="300"
+                     height="225"
+                     loading="lazy">
+            </div>
+            <div class="property-details">
+                <p class="property-price">21 000 000 ₽</p>
+                <button class="property-button">Подробнее</button>
+            </div>
+        </article>
+    </div>
+    
+    
+<div class="catalog-actions" style="display: flex; flex-direction: column; gap: 16px;">
+    <button class="catalog-show-all" style="align-self: flex-start;">Посмотреть всё</button>
+    
+    <div class="catalog-cta" style="display: flex; flex-direction: column; gap: 8px;">
+        <h2 class="cta-title" style="margin: 0;">Хотите купить дом у нас?</h2>
+        <p class="cta-description" style="margin: 0;">Отправьте нам заявку и мы отправим вам наши предложения</p>
+        <button class="cta-button" style="align-self: flex-start;">Связаться</button>
+    </div>
+</div>
+</section>
 <h2>Отзывы клиентов</h2>
     <section id="reviews" class="reviews-section">
-        
-            <div class="swiper reviews">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                <div class="review-header">
-                  <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Аватар" class="avatar">
-                  <div>
-                    <div class="review-author">Алексей Смирнов</div>
-                  </div>
-                </div>
-                <div class="review-content">5 лет назад решили переехать в комфортабельное жильё. Знакомые <br> посоветовали обратиться в компанию ТанхаусПремиум. В компании работают <br> квалифицированные специалисты, которые быстро помогли подобрать нам <br> подходящее по нашим требованиям танхаус. Удивили и цены,  гибкая система <br> рассрочки. Всем  советуем, не пожалеете!</div>
-                </div>
-                <div class="swiper-slide">
-                <div class="review-header">
-                  <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Аватар" class="avatar">
-                  <div>
-                    <div class="review-author">Сергей Анохин</div>
-                  </div>
-                </div>
-                <div class="review-content">С нуля освоил JavaScript,теперь пишу свои проекты.</div>
-                </div>
-                <div class="swiper-slide">
-                <div class="review-header">
-                  <img src="../img/avatar-4.png" alt="Аватар" class="avatar">
-                  <div>
-                    <div class="review-author">Ольга Петрова</div>
-                  </div>
-                </div>
-                <div class="review-content">Хорошая подача материала. Спасибо автору!.</div>
-                </div>
-                <div class="swiper-slide">
-                <div class="review-header">
-                  <img src="../img/avatar-3.png" alt="Аватар" class="avatar">
-                  <div>
-                    <div class="review-author">Наталья Лаврова</div>
-                  </div>
-                </div>
-                <div class="review-content">Спасибо за учебник. Надеюсь,что автор пополнит его в дальнейшем практическими задниями с обратной проверкой.</div>
-                </div>
-              </div>
-              <div class="swiper-pagination"></div>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <!-- Отзыв 1 -->
+      <div class="swiper-slide">
+        <div class="review-card">
+          <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Алексей Смирнов" class="review-avatar">
+          <div class="review-content-wrapper">
+            <h3 class="review-author">Алексей Смирнов</h3>
+            <div class="review-content">
+              <p>5 лет назад решили переехать в комфортабельное жильё. Знакомые посоветовали обратиться в компанию ТанхаусПремиум. В компании работают квалифицированные специалисты, которые быстро помогли подобрать нам подходящее по нашим требованиям танхаус. Удивили и цены, гибкая система рассрочки. Всем советуем, не пожалеете!</p>
             </div>
-          </section>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Отзыв 2 -->
+      <div class="swiper-slide">
+        <div class="review-card">
+          <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Сергей Анохин" class="review-avatar">
+          <div class="review-content-wrapper">
+            <h3 class="review-author">Сергей Анохин</h3>
+            <div class="review-content">
+              <p>Обратился в компанию за консультацией по ипотеке. Менеджер подробно объяснил все нюансы, помог собрать документы. В итоге одобрили максимальную сумму на выгодных условиях. Теперь выбираем дом мечты для нашей семьи!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Отзыв 3 -->
+      <div class="swiper-slide">
+        <div class="review-card">
+          <img src="img/avatar-3.png" alt="Ольга Петрова" class="review-avatar">
+          <div class="review-content-wrapper">
+            <h3 class="review-author">Ольга Петрова</h3>
+            <div class="review-content">
+              <p>Купили таунхаус через эту компанию год назад. Все этапы от выбора до заселения прошли гладко. Отдельное спасибо за помощь с ремонтом - порекомендовали проверенных подрядчиков. Живём с удовольствием, соседи замечательные!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Отзыв 4 -->
+      <div class="swiper-slide">
+        <div class="review-card">
+          <img src="img/avatar-4.png" alt="Наталья Лаврова" class="review-avatar">
+          <div class="review-content-wrapper">
+            <h3 class="review-author">Наталья Лаврова</h3>
+            <div class="review-content">
+              <p>Работали с несколькими агентствами, но только здесь получили действительно профессиональный подход. Учитывали все наши пожелания, даже самые нестандартные. В итоге нашли идеальный вариант - просторный таунхаус с террасой и садом.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
 
 <section class="address">
     <h2>Наш адрес</h2>
@@ -257,7 +327,15 @@
         </div>
     </div>
 </footer>
-
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    
+  </script>
 </html>
