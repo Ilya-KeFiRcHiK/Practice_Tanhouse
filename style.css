@@ -49,8 +49,8 @@
 
 .header-bottom{
     display: flex;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
 
 .header-ul{
@@ -107,12 +107,24 @@
     background-color: #176297;
     color: white;
     font-size: 20px;
-    margin-top: 40px;
     width: fit-content;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 50px;
     padding-right: 50px;
+}
+
+.zvonok-podrobnie{
+  border-radius: 30px;
+  background-color: #176297;
+  margin-top: 40px;
+  color: white;
+  font-size: 20px;
+  width: fit-content;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .header-zvonok:hover {
@@ -162,6 +174,7 @@
     font-size: 25px;
     text-align: center;
     padding: 40px;
+    padding-top: 0;
 }
 
 h1{
@@ -186,13 +199,11 @@ h1{
     top: 310px;
     left: 200px;
     justify-content: center;
-    transition: transform 0.2s;
 }
 
 .sale-tanhouse-p{
 color: #104266;
 font-size: 35px;
-margin-top: -30px;
 }
 
 
@@ -238,6 +249,8 @@ h3{
 
 .comp{
     font-size: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .header-podrobnie {
@@ -275,7 +288,6 @@ h3{
 
 h3{
     text-align: center;
-    padding: 40px;
     font-size: 40px;
 }
 
@@ -607,8 +619,7 @@ h2{
 .reviews-section {
     padding: 70px 20px;
     background: #f8f9fa;
-    background-image: url(img/4da73e45234489.582a187b547f0.jpg);
-    background-repeat: no-repeat;
+    background: url(img/4da73e45234489.582a187b547f0.jpg) center/cover no-repeat;
 }
 
 .reviews-title {
@@ -672,7 +683,7 @@ h2{
 
 .review-avatar {
   width: 80px;
-  height: 80px;
+  height: 80px !important;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
@@ -707,15 +718,16 @@ h2{
 .swiper-button-prev {
   color: #4a6bff;
   background: white;
-  width: 40px;
-  height: 40px;
+  width: 40px !important;
+  height: 40px !important;
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .swiper-button-next::after, 
 .swiper-button-prev::after {
-  font-size: 1.2rem;
+  font-size: 24px !important;
+  
 }
 
 
@@ -878,11 +890,11 @@ align-items: end;
 }
 
 .contact-icon {
-    display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 30px;
+  height: 30px;
   color: #176297;
   flex-shrink: 0;
 }
@@ -985,6 +997,8 @@ align-items: end;
 .social-link {
     display: inline-block;
     transition: transform 0.3s;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .social-link img {
@@ -1144,6 +1158,7 @@ align-items: end;
   padding: 20px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   border-radius: 8px;
+  transition: 0.3s;
   }
 
   .property-card:hover{
@@ -1566,7 +1581,6 @@ align-items: end;
     .swiper-slide {
       text-align: center;
       font-size: 18px;
-      background: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -1667,6 +1681,7 @@ address {
 }
 
 .catalog-show-all{
+  display: flex;
   border-radius: 30px;
     background-color: #176297;
     color: white;
@@ -1674,6 +1689,8 @@ address {
     margin-top: 40px;
     width: fit-content;
     padding-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
     padding-bottom: 15px;
     padding-left: 50px;
     padding-right: 50px;
@@ -1684,12 +1701,15 @@ address {
 }
 
 .cta-button{
+  display: flex;
   border-radius: 30px;
     background-color: #176297;
     color: white;
     font-size: 20px;
     margin-top: 40px;
     width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 50px;
@@ -1702,11 +1722,9 @@ address {
 
 .cta-description{
   font-size: 25px;
+  text-align: center;
 }
 
-.sale-container:hover{
-  transform: scale(1.5);
-}
   
 
 
