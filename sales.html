@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
+    <div class="scroll-buttons-container">
+    <button class="scroll-button" id="scrollDown">
+        <svg viewBox="0 0 24 24"><path d="M12 16l-6-6h12z"/></svg>
+    </button>
+    <button class="scroll-button-up" id="scrollUp">
+        <svg viewBox="0 0 24 24"><path d="M12 8l6 6H6z"/></svg>
+    </button>
+</div>
     <header class="header">
     <div class="header-top container">
         <div class="header-logo">
@@ -69,22 +77,21 @@
 </div
 
 
-        <section class="address">
+       <section class="address">
     <h2>Наш адрес</h2>
-    <p class="address-sales">ул Шиллера, 25А, офис 7</p>
+    <p class="address-text">ул Шиллера, 25А, офис 7</p>
 </section>
 
 <section>
-    <div style="width: 100%; height: 500px; margin: 0 auto;">
+    <div style="width: 100%; height: 300px; margin: 0 auto;">
         <script 
             type="text/javascript" 
             charset="utf-8" 
             async 
-            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ada444df6a63e56e8427f115d85c3c42fd681fa56634f1e79d054e72ebf3aa537&width=100%&height=500&lang=ru_RU&scroll=true">
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ada444df6a63e56e8427f115d85c3c42fd681fa56634f1e79d054e72ebf3aa537&width=100%&height=300&lang=ru_RU&scroll=true">
         </script>
     </div>
 </section>
-
 <section class="contacts-section">
     <div class="contact-container">
         <div class="contact-item">
@@ -143,6 +150,9 @@
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="ScrollDown.js"></script>
+<script src="ScrollUp.js"></script>
+<script src="../script.js"></script>
 </html>
 </body>
 </html>

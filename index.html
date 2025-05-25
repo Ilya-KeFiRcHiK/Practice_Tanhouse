@@ -3,18 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <link rel="stylesheet" href="style.css" />
+    <title>ТаунхаусПремиум</title>
+    <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="img/transparter.png" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
+    <div class="scroll-buttons-container">
+    <button class="scroll-button" id="scrollDown">
+        <svg viewBox="0 0 24 24"><path d="M12 16l-6-6h12z"/></svg>
+    </button>
+    <button class="scroll-button-up" id="scrollUp">
+        <svg viewBox="0 0 24 24"><path d="M12 8l6 6H6z"/></svg>
+    </button>
+</div>
     <header class="header">
     <div class="header-top container">
         <div class="header-logo">
-            <img src="img/modern_house_building_home_icon_231005.svg" alt="Логотип ТаунхаусПремиум">
-            <h1>ТаунхаусПремиум</h1>
-        </div>
+    <img class="logo-img" src="img/modern_house_building_home_icon_231005.svg" alt="Логотип ТаунхаусПремиум">
+    <h1 class="logo-title">ТаунхаусПремиум</h1>
+</div>
         
         <div class="header-info">
             <div class="header-address">
@@ -23,7 +31,7 @@
                 <p class="address">ул. Шиллера, 25А</p>
             </div>
             <div class="header-phone">
-<img class="phone-icon" src="img/telephone-fill 1.png" alt="Иконка телефона">
+                <img class="phone-icon" src="img/telephone-fill 1.png" alt="Иконка телефона">
                 <p class="address-center">Телефон</p>
                 <p class="address">+7 (963) 293-73-33</p>
             </div>
@@ -68,11 +76,11 @@
     <section class="Company">
         <div class="company-text">
             <h3 class="comp">О компании</h3>
-            <p class="company-text-p">Компания <b><span style="color: #176297;">ТаунхаусПремиум</span></b> предлагает комплексное <br> сопровождение при поиске и приобретении <br> недвижимости в Калининграде и Калининградской области. <br>
+            <p class="company-text-p">Компания <b><span style="color: #176297;">ТаунхаусПремиум</span></b> предлагает комплексное <br> сопровождение при поиске и приобретении <br> недвижимости в Калининграде и Калининградской области. <br>
 <b><span style="color: #176297;">Таунхаусы</span></b> - выбор для вашего комфорта. <br>
 Подбираем идеальное жильё от бюджетных вариантов
 до премиум-класса. <br>
-Наши квалифицированные специалисты всегда в <br> курсе актуального наличия и стоимости.</p>
+Наши квалифицированные специалисты всегда в <br> курсе актуального наличия и стоимости.</p>
 <button class="header-podrobnie-company-c">Подробнее</button>
         </div>
     </section>
@@ -118,7 +126,6 @@
     <h2 class="catalog-title">Каталог</h2>
     
     <div class="property-grid">
-        <!-- Карточка 1 -->
         <article class="property-card">
             <div class="property-image-container">
                 <img src="img/16e23c2aed0d43fd8d1ae456e01abe4e.webp" 
@@ -134,7 +141,6 @@
             </div>
         </article>
         
-        <!-- Карточка 2 -->
         <article class="property-card">
             <div class="property-image-container">
                 <img src="img/4ba17f88f1ee4b4b891837a8fb45b6cf.webp" 
@@ -150,7 +156,6 @@
             </div>
         </article>
         
-        <!-- Карточка 3 -->
         <article class="property-card">
             <div class="property-image-container">
                 <img src="img/b2bbe4e.webp" 
@@ -166,7 +171,6 @@
             </div>
         </article>
 
-        <!-- Карточка 4 -->
         <article class="property-card">
             <div class="property-image-container">
                 <img src="img/dbad321.webp" 
@@ -198,7 +202,6 @@
     <section id="reviews" class="reviews-section">
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-      <!-- Отзыв 1 -->
       <div class="swiper-slide">
         <div class="review-card">
           <img src="img/6ed89b37c942b597b9887b19c73da8a8.jpg" alt="Алексей Смирнов" class="review-avatar">
@@ -211,7 +214,6 @@
         </div>
       </div>
       
-      <!-- Отзыв 2 -->
       <div class="swiper-slide">
         <div class="review-card">
           <img src="img/2051fff4c0c5cd31ac0f1393ea87f637.jpg" alt="Сергей Анохин" class="review-avatar">
@@ -224,7 +226,6 @@
         </div>
       </div>
       
-      <!-- Отзыв 3 -->
       <div class="swiper-slide">
         <div class="review-card">
           <img src="img/avatar-3.png" alt="Ольга Петрова" class="review-avatar">
@@ -237,7 +238,6 @@
         </div>
       </div>
       
-      <!-- Отзыв 4 -->
       <div class="swiper-slide">
         <div class="review-card">
           <img src="img/avatar-4.png" alt="Наталья Лаврова" class="review-avatar">
@@ -262,12 +262,12 @@
 </section>
 
 <section>
-    <div style="width: 100%; height: 500px; margin: 0 auto;">
+    <div style="width: 100%; height: 300px; margin: 0 auto;">
         <script 
             type="text/javascript" 
             charset="utf-8" 
             async 
-            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ada444df6a63e56e8427f115d85c3c42fd681fa56634f1e79d054e72ebf3aa537&width=100%&height=500&lang=ru_RU&scroll=true">
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ada444df6a63e56e8427f115d85c3c42fd681fa56634f1e79d054e72ebf3aa537&width=100%&height=300&lang=ru_RU&scroll=true">
         </script>
     </div>
 </section>
@@ -328,6 +328,9 @@
     </div>
 </footer>
 </body>
+<script src="ScrollDown.js"></script>
+<script src="ScrollUp.js"></script>
+<script src="../script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
     var swiper = new Swiper(".mySwiper", {
