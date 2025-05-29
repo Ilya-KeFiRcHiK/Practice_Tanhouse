@@ -7,12 +7,10 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="img/transparter.png" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
   <div class="scroll-buttons-container">
-    <button class="scroll-button" id="scrollDown">
-        <svg viewBox="0 0 24 24"><path d="M12 16l-6-6h12z"/></svg>
-    </button>
     <button class="scroll-button-up" id="scrollUp">
         <svg viewBox="0 0 24 24"><path d="M12 8l6 6H6z"/></svg>
     </button>
@@ -21,8 +19,7 @@
     <header class="header">
     <div class="header-top container">
         <div class="header-logo">
-    <img class="logo-img" src="img/modern_house_building_home_icon_231005.svg" alt="Логотип ТаунхаусПремиум">
-    <h1 class="logo-title">ТаунхаусПремиум</h1>
+    <img class="logo-img" src="img/image 1 (1).svg" alt="Логотип ТаунхаусПремиум">
 </div>
         
         <div class="header-info">
@@ -43,9 +40,9 @@
 </header>
 
         <div class="header-bottom container">
-           <a class="header-link" href="">Главная</a>
+           <a class="header-link" onclick="window.location.href='index.html'">Главная</a>
+           <a class="header-link" href="">Меню</a>
            <nav class="header-nav">
-            <a class="header-link" href="">Меню</a>
              <ul class="header-ul">
               <li class="header-li"><a class="" href="">О компании</a></li>
               <li class="header-li"><a class="" href="">Наши преимущества</a></li>
@@ -67,9 +64,7 @@
     <div class="contact-grid">
       <div class="contact-card">
         <div class="contact-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-          </svg>
+          <i class="bi bi-telephone-fill"></i>
         </div>
         <div class="contact-details">
           <span class="contact-label">Телефон</span>
@@ -79,10 +74,7 @@
       
       <div class="contact-card">
         <div class="contact-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-            <circle cx="12" cy="10" r="3"></circle>
-          </svg>
+          <i class="bi bi-geo-alt-fill"></i>
         </div>
         <div class="contact-details">
           <span class="contact-label">Адрес</span>
@@ -94,15 +86,12 @@
 
       <div class="contact-card">
         <div class="contact-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-            <circle cx="12" cy="10" r="3"></circle>
-          </svg>
+          <i class="bi bi-building"></i>
         </div>
         <div class="contact-details">
           <span class="contact-label">Юридический адрес</span>
           <address class="contact-value">
-            ООО "ТаунхаусПремиум"
+            ООО "ТаунхаусПремиум"<br>
             236000, Россия, Калининград,<br>ул. Шиллера, 25А, офис 7
           </address>
         </div>
@@ -110,15 +99,12 @@
       
       <div class="contact-card">
         <div class="contact-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <polyline points="12 6 12 12 16 14"></polyline>
-          </svg>
+          <i class="bi bi-clock-fill"></i>
         </div>
         <div class="contact-details">
           <span class="contact-label">Часы работы</span>
           <div class="contact-value">
-            <span class="working-hours">Пн-Пт: 9:00–19:00</span>
+            <span class="working-hours">Пн-Пт: 9:00-19:00</span>
             <span class="weekend">Сб-Вс: выходной</span>
           </div>
         </div>

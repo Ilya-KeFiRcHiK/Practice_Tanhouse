@@ -1,0 +1,50 @@
+<svg width="600" height="300" viewBox="0 0 600 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Градиентный фон -->
+    <rect width="600" height="300" fill="url(#bg_gradient)"/>
+    <defs>
+        <linearGradient id="bg_gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#F8F9FA"/>
+            <stop offset="100%" stop-color="#E9ECEF"/>
+        </linearGradient>
+        
+        <!-- Градиент для текста -->
+        <linearGradient id="text_gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#0A2240"/>
+            <stop offset="50%" stop-color="#2C4B7A"/>
+            <stop offset="100%" stop-color="#4a6bff"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Улучшенная иконка таунхауса с тенью -->
+    <g filter="url(#shadow)">
+        <path d="M120 200L120 110L180 50L240 110L240 200Z" fill="#0A2240" stroke="#4a6bff" stroke-width="3"/>
+        <path d="M180 50L270 110L270 170L240 140L240 110Z" fill="#F8F9FA" stroke="#4a6bff" stroke-width="3"/>
+        <rect x="140" y="140" width="25" height="60" fill="#4a6bff" rx="3"/>
+        <rect x="175" y="140" width="25" height="60" fill="#C0C0C0" rx="3"/>
+        <rect x="120" y="195" width="120" height="5" fill="#4a6bff" rx="2.5"/>
+        
+        <!-- Декоративные элементы крыши -->
+        <path d="M180 50L120 110L180 170L240 110L180 50Z" fill="#4a6bff" fill-opacity="0.1"/>
+    </g>
+
+    <!-- Название компании с улучшенной типографикой -->
+    <text x="300" y="120" font-family="'Montserrat', sans-serif" font-size="48" font-weight="800" letter-spacing="1.8" fill="url(#text_gradient)">
+        ТАУНХАУС
+    </text>
+    <text x="300" y="170" font-family="'Montserrat', sans-serif" font-size="48" font-weight="800" letter-spacing="1.8" fill="#4a6bff">
+        ПРЕМИУМ
+    </text>
+
+    <!-- Современные декоративные элементы -->
+    <line x1="300" y1="190" x2="500" y2="190" stroke="#4a6bff" stroke-width="4" stroke-linecap="round" stroke-dasharray="1, 10"/>
+    <circle cx="310" cy="190" r="4" fill="#4a6bff"/>
+    <circle cx="330" cy="190" r="4" fill="#C0C0C0"/>
+    <circle cx="350" cy="190" r="4" fill="#4a6bff"/>
+
+    <!-- Эффект тени -->
+    <defs>
+        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="5" dy="5" stdDeviation="5" flood-color="#0A2240" flood-opacity="0.2"/>
+        </filter>
+    </defs>
+</svg>
