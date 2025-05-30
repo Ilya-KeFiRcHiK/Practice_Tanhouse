@@ -40,7 +40,7 @@
             </div>
         </div>
         <button class="feedback-toggle-btn" id="feedbackToggleBtn">
-        Заказать звонок <span class="icon">▼</span>
+        Заказать звонок <span class="icon"></span>
     </button>
        
              <!-- Кнопка для открытия/закрытия формы -->
@@ -49,7 +49,7 @@
     <!-- Контейнер формы -->
     <div class="feedback-form-container" id="feedbackFormContainer">
         <div class="feedback-form-header" id="feedbackFormHeader">
-            Форма обратной связи
+            Напишите нам, и мы свяжемся с вами в удобное для вас время
             <button class="close-btn" id="closeFeedbackForm">×</button>
         </div>
         
@@ -74,7 +74,7 @@
         
             <label class="forms">
                 Сообщение:
-                <textarea id="message" name="message" placeholder="Макс. 255 слов, предлоги и союзы учитываются" required></textarea>
+                <input type="text" id="message" class="message" name="message" placeholder="Макс. 255 слов, предлоги и союзы учитываются" required></input>
                 <div class="hint" id="message-hint"></div>
             </label>
         
@@ -82,26 +82,25 @@
         </form>
     </div>
         </button>
-        
     </div>
 </header>
 
         <div class="header-bottom container">
            <a class="header-link" href="">Главная</a>
            <nav class="dropdown-nav">
-                <button id="menu-toggle">Меню ▾</button>
+                <button id="menu-toggle">Меню</button>
                 <ul class="menu-list show" id="menu-list">
-                    <li><a href="#about">О компании</a></li>
-                    <li><a href="#reviews">Наши преимущества</a></li>
-                    <li><a href="#catalog">Каталог</a></li>
-                    <li><a href="#message">Отзывы клиентоа</a></li>
-                    <li><a href="#address">Наш адрес</a></li>
+                    <li class="menu-color"><a href="#about">О компании</a></li>
+                    <li class="menu-color"><a href="#reviews">Наши преимущества</a></li>
+                    <li class="menu-color"><a href="#catalog">Каталог</a></li>
+                    <li class="menu-color"><a href="#message">Отзывы клиентоа</a></li>
+                    <li class="menu-color"><a href="#address">Наш адрес</a></li>
                 </ul>
             </nav>
            <a onclick="window.location.href='contacts.html'" class="header-link">Контакты</a>
         </div>
 
-<img class="img-home" src="img/4da73e45234489.582a187b547f0.jpg" alt="">
+<div class="img-home parallax" style="background-image: url('img/4da73e45234489.582a187b547f0.jpg');"></div>
         <div class="sale-container">
     <div class="sale-tanhouse">
         <h3 class="sale-tanhouse-p">Продажа таунхаусов</h3>
@@ -110,14 +109,18 @@
             <p class="sale-p">Успейте купить по выгодной цене!</p>
             <p class="sale-p">Скидки до <span class="discount">15%</span></p>
             <p class="timer-text">До конца акции осталось:</p>
+            <div class="timer" id="countdown">
+                    Загрузка...
+            </div>
             <button onclick="window.location.href='sales.html'" class="zvonok-podrobnie">Подробнее</button>
+            <script src="script.js"></script>
         </div>
     </div>
 </div>
         
     </header>
 
-    <section class="Company">
+    <section class="Company parallax" style="background-image: url(img/4da73e45234489.582a187b547f0.jpg);">
         <div class="company-text">
             <h3 id="about" class="comp">О компании</h3>
             <p class="company-text-p">Компания <b><span style="color: #176297;">ТаунхаусПремиум</span></b> предлагает комплексное <br> сопровождение при поиске и приобретении <br> недвижимости в Калининграде и Калининградской области. <br>
@@ -425,6 +428,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-    
+
   </script>
 </html>

@@ -17,7 +17,7 @@
     <header class="header">
     <div class="header-top container">
         <div class="header-logo">
-            <img src="img/image 1 (1).svg" alt="Логотип ТаунхаусПремиум">
+            <img src="img/image 1 (9).svg" alt="Логотип ТаунхаусПремиум">
         </div>
         
         <div class="header-info">
@@ -30,6 +30,11 @@
 <img class="phone-icon" src="img/telephone-fill 1.png" alt="Иконка телефона">
                 <p class="address-center">Телефон</p>
                 <p class="address">+7 (963) 293-73-33</p>
+            </div>
+            <div class="header-phone">
+                <img class="clock-icon" src="clock-with-white-face_icon-icons.com_72804 (1).png" alt="Иконка часов">
+                <p class="address-center">Режим работы</p>
+                <p class="address">пн-пт с 9:00 до 19:00</p>
             </div>
         </div>
         
@@ -53,25 +58,54 @@
            </nav>
            
         </div>
+<div class="img-home parallax" style="background-image: url('img/4da73e45234489.582a187b547f0.jpg');"></div>
 <div class="image-text-container">
-    <img class="img-contacts" src="img/4da73e45234489.582a187b547f0.jpg" alt="Таунхаусы">
     <div class="text-overlay">
         <p class="text-contact"><b>Мы исполним ваши мечты!</b></p>
         <p><b class="text-contact-t">Успейте купить дом по выгодной цене!</b></p>
     </div>
 </div> 
        
-       <div class="promo-banner">
+<div class="promo-banner">
     <div class="promo-content">
         <h2 class="promo-title">ГОРЯЧИЕ СКИДКИ ЛЕТА</h2>
         <div class="promo-text">
-            <p>На данный момент мы предлагаем вам скидки до 15% при оплате наличными.</p>
+            <p>На данный момент мы предлагаем вам скидки до <strong>15%</strong> при оплате наличными.</p>
             <p>Не упустите свой шанс! Время акции ограниченно!</p>
-            <p class="promo-date"><strong>c 01.06.2025 по 30.06.2025</strong></p>
+            <p class="promo-date"><strong>c 01.06.2025 по 31.08.2025</strong></p>
+            <div class="timer" id="countdown">
+                Загрузка...
+            </div>
+            <script src="script.js"></script>
+            <button class="feedback-toggle-btn" id="feedbackToggleBtn">
+                Связаться <span class="icon"></span>
+            </button>
         </div>
     </div>
-</div
+</div>
 
+<div class="feedback-form-container" id="feedbackFormContainer">
+        <div class="feedback-form-header" id="feedbackFormHeader">
+           Оставьте свои данные и наш менеджер свяжется с вами
+            <button class="close-btn" id="closeFeedbackForm">×</button>
+        </div>
+        
+        <form action="feedback.php" method="POST" id="feedback-form" class="feedback-form" autocomplete="off">
+            <label>
+                Имя:
+                <input type="text" class="name" name="name" id="name" placeholder="Только буквы, от 1 до 12 символов" required>
+                <div class="hint" id="name-hint"></div>
+            </label>
+        
+            <label class="forms">
+                Номер телефона:
+                <textarea id="message" class="name" name="name" placeholder="цифры от 1 до 11 символов" required></textarea>
+                <div class="hint" id="message-hint"></div>
+            </label>
+        
+            <button class="blue-button" id="submit-btn" type="submit">Получить консультацию</button>
+        </form>
+    </div>
 
        <section class="address">
     <h2>Наш адрес</h2>
@@ -149,6 +183,59 @@
 <script src="ScrollDown.js"></script>
 <script src="ScrollUp.js"></script>
 <script src="../script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    // Получаем элементы
+    const toggleBtn = document.getElementById('feedbackToggleBtn');
+    const formContainer = document.getElementById('feedbackFormContainer');
+    const closeBtn = document.getElementById('closeFeedbackForm');
+    const formHeader = document.getElementById('feedbackFormHeader');
+    
+    // Проверяем, что элементы существуют
+    if (!toggleBtn || !formContainer || !closeBtn || !formHeader) {
+        console.error('One or more elements not found!');
+        return;
+    }
+    
+    // Открытие/закрытие формы
+    toggleBtn.addEventListener('click', function() {
+        formContainer.classList.toggle('visible');
+    });
+    
+    // Закрытие формы по крестику
+    closeBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        formContainer.classList.remove('visible');
+    });
+    
+    // Закрытие формы по клику на заголовок
+    formHeader.addEventListener('click', function(e) {
+        if (e.target === this) { // Проверяем, что кликнули именно на заголовок
+            formContainer.classList.remove('visible');
+        }
+    });
+    
+    // Валидация поля имени
+    const nameInput = document.getElementById('name');
+    const nameHint = document.getElementById('name-hint');
+    
+    if (nameInput && nameHint) {
+        nameInput.addEventListener('input', function() {
+            const value = this.value;
+            if (!/^[a-zA-Zа-яА-ЯёЁ\s]+$/.test(value)) {
+                nameHint.textContent = 'Только буквы разрешены';
+                this.style.borderColor = 'red';
+            } else if (value.length > 12) {
+                nameHint.textContent = 'Максимум 12 символов';
+                this.style.borderColor = 'red';
+            } else {
+                nameHint.textContent = '';
+                this.style.borderColor = '#ddd';
+            }
+        });
+    }
+});
+</script>
 </html>
 </body>
 </html>

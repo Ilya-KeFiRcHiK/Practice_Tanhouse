@@ -8,7 +8,7 @@
 }
 
 .feedback-toggle-btn {
-            border-radius: 30px;
+    border-radius: 30px;
     background-color: #176297;
     color: white;
     font-size: 20px;
@@ -17,7 +17,7 @@
     padding-bottom: 15px;
     padding-left: 50px;
     padding-right: 50px;
-        }
+}
         
         .feedback-toggle-btn:hover {
             background-color: #357abd;
@@ -58,11 +58,14 @@
             text-align: center;
             font-family: 'Montserrat';
         }
+
+        .message{
+          height: 100px;
+        }
         
         .feedback-form {
             padding: 20px;
-            max-height: 400px;
-            overflow-y: auto;
+            overflow: hidden;
         }
         
         .feedback-form label {
@@ -84,12 +87,12 @@
         }
         
         .feedback-form textarea {
-            height: 100px;
+            height: 40px;
             resize: vertical;
         }
         
         .feedback-form #submit-btn {
-            background-color: #4a90e2;
+            background-color: #095a94;
             color: white;
             border: none;
             padding: 10px 15px;
@@ -195,6 +198,15 @@
   justify-content: center;
 }
 
+.menu-color{
+  background: white;
+  color: black;
+}
+
+.menu-color:hover{
+  background-color: #888;
+}
+
 .header-link{
     margin-left:30px;
     margin-right: 30px;
@@ -203,6 +215,10 @@
     font-size: 20px;
     display: flex;
     justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .header-top{
@@ -322,19 +338,19 @@
     opacity: 1;
 }
 
-.telefon{
-    margin-left: 1150px;
-}
 
 .map{
-    margin-left: 870px;
     margin-top: -30px;
+    width: 100%;
+}
+
+iframe{
+  width: 100%;
 }
 
 .dropdown-nav {
     position: relative;
     display: inline-block;
-    margin: 20px;
   }
 
   #menu-toggle {
@@ -370,10 +386,28 @@
   .menu-list li {
     border-bottom: 1px solid #eee;
   }
+
+  .timer {
+    color: #095a94;
+    display: flex;
+    font-size: 30px;
+    border-radius: 80%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+}
   
   .menu-list li:last-child {
     border-bottom: none;
   }
+
+  .megatimer-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
   
   .menu-list a {
     display: block;
@@ -419,13 +453,12 @@ h1{
 .sale-tanhouse{
     border-radius: 12px;
     padding: 25px;
-    max-width: 500px;
+    max-width: 650px;
     min-height: 450px;
     text-align: center;
     border-radius: 50px;
     padding: 25px;
-    max-width: 500px;
-    height: 450px;
+    height: 600px;
     background-color: #fff9f5;
     box-shadow: 0 4px 15px rgba(255, 107, 0, 0.1);
     text-align: center;
@@ -442,6 +475,76 @@ h1{
 .sale-tanhouse-p{
 color: #104266;
 font-size: 35px;
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.countdown-item {
+  background: white;
+  padding: 15px 10px;
+  border-radius: 10px;
+  min-width: 80px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.countdown-item span {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  display: block;
+  line-height: 1;
+}
+
+.countdown-label {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+.countdown-separator {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  padding-bottom: 20px;
+}
+
+.new-year-message {
+    color: #d40000;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px gold;
+    animation: blink 1s infinite;
+}
+
+#countdown {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 30px auto;
+    padding: 20px;
+    color: black;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 2px solid #e0e0e0;
+}
+
+.countdown-container {
+  font-family: 'Arial', sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .rasrochka::after{
@@ -1270,7 +1373,7 @@ align-items: end;
 }
 
 .text-contact {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 15px;
 }
 
@@ -1288,7 +1391,7 @@ align-items: end;
   padding: 30px;
   text-align: center;
   border-radius: 8px;
-  max-width: 500px;
+  max-width: 530px;
   margin: 0 auto;
 }
 
@@ -1538,6 +1641,28 @@ align-items: end;
     font-weight: 500;
     margin: 1.5rem 0 1rem;
     color: #176297;
+  }
+
+  strong {
+    color: #104266; /* Красный цвет для акцента */
+    font-size: 1.1em;
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-position 0.3s ease-out;
+  }
+  
+  .img-home {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px; /* Высота параллакс-секции */
   }
 
   .property-card__layout-list,
@@ -2000,9 +2125,43 @@ align-items: end;
   }
 }
 
+@media (max-width: 1140px){
+  .header-top{
+    justify-content: center;
+  }
+
+  .header-address{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .header-phone{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .feedback-toggle-btn{
+    margin-top: 30px;
+  }
+
+  .header-info{
+    align-items: center;
+  }
+}
+
 @media (max-width: 960px){
   .header-top{
     flex-direction: column;
+  }
+  
+  .header-address{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .header-form{
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
@@ -2022,14 +2181,25 @@ align-items: end;
   .container {
     padding: 0 var(--mobile-padding);
     max-width: 100%;
-    overflow-x: hidden; /* Защита от горизонтального скролла */
+  }
+
+  .text-1{
+    margin: 2%;
+  }
+
+  .text-2{
+    margin: 2%;
+  }
+
+  .text-3{
+    margin: 2%;
   }
   
   /* Шапка */
   .header-top {
     display: flex;
     flex-direction: column;
-    align-items: stretch; /* Растягиваем на всю ширину */
+    align-items: center;
     gap: var(--mobile-gap);
     padding: 12px 0;
   }
@@ -2131,6 +2301,7 @@ align-items: end;
   .sale-container {
     padding: var(--mobile-padding);
     margin-top: -5px; /* Убираем возможный зазор */
+    height: 550px;
   }
   
   .sale-tanhouse {
@@ -2160,10 +2331,15 @@ align-items: end;
     margin-top: 8px;
     display: flex;
     justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  
-  
+  .sale-tanhouse{
+    min-height: 350px;
+    height: 350px;
+  }
+
   /* О компании */
   .company-text {
     padding: var(--mobile-padding);
@@ -2178,6 +2354,7 @@ align-items: end;
     padding: 12px;
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
   }
   
   /* Преимущества */
