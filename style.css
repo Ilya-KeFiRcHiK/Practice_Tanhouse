@@ -1361,7 +1361,7 @@ align-items: end;
 
 .text-overlay {
     position: absolute;
-    top: 70%;
+    top: 50%;
     left: 50%;
     font-size: 60px;
     transform: translate(-50%, -50%);
@@ -1644,7 +1644,7 @@ align-items: end;
   }
 
   strong {
-    color: #104266; /* Красный цвет для акцента */
+    color: #104266; 
     font-size: 1.1em;
 }
 
@@ -1662,7 +1662,7 @@ align-items: end;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 400px; /* Высота параллакс-секции */
+    min-height: 650px;
   }
 
   .property-card__layout-list,
