@@ -183,6 +183,8 @@
     display: flex;
     padding-top: 35px;
     padding-bottom: 35px;
+    position: relative;
+    z-index: 50;
 }
 
 .header-ul{
@@ -1360,6 +1362,8 @@ align-items: end;
 }
 
 .text-overlay {
+  display: flex;
+  flex-direction: column;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1506,6 +1510,11 @@ align-items: end;
 
   .property-image-container {
   overflow: hidden;
+}
+
+.image-text-container{
+  position: relative;
+
 }
 
 .property-card:hover .property-image {

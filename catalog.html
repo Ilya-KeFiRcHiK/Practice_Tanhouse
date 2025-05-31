@@ -45,17 +45,16 @@
 
         <div class="header-bottom container">
            <a class="header-link" onclick="window.location.href='index.html'">Главная</a>
-           <a class="header-link" href="">Меню</a>
-           <nav class="header-nav">
-             <ul class="header-ul">
-              <li class="header-li"><a class="" href="">О компании</a></li>
-              <li class="header-li"><a class="" href="">Наши преимущества</a></li>
-              <li class="header-li"><a href="">Каталог</a></li>
-              <li class="header-li"><a href="">Отзывы</a></li>
-              <li class="header-li"><a href="">Акции</a></li>
-              <li class="header-li"><a href="">Контакты</a></li>
-            </ul>
-           </nav>
+          <nav class="dropdown-nav">
+                <button id="menu-toggle">Меню</button>
+                <ul class="menu-list" id="menu-list">
+                    <li class="menu-color"><a href="#about">О компании</a></li>
+                    <li class="menu-color"><a href="#reviews">Наши преимущества</a></li>
+                    <li class="menu-color"><a href="#catalog">Каталог</a></li>
+                    <li class="menu-color"><a href="#message">Отзывы клиентоа</a></li>
+                    <li class="menu-color"><a href="#address">Наш адрес</a></li>
+                </ul>
+            </nav>
            <a class="header-link" href="">Каталог</a>
         </div>
         <div class="img-home parallax" style="background-image: url('img/4da73e45234489.582a187b547f0.jpg');"></div>
@@ -376,7 +375,7 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="ScrollDown.js"></script>
 <script src="ScrollUp.js"></script>
-<script src="../script.js"></script>
+<script src="script.js"></script>
 </html>
 </body>
 </html>
