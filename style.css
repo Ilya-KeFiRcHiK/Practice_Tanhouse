@@ -367,7 +367,7 @@ form{
 
         .feedback-title {
            text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: -40px;
         color: #333;
         }
 
@@ -1016,7 +1016,7 @@ h1{
 .sale-container {
     display: flex;
     position: absolute;
-    top: 330px;
+    top: 305px;
     left: 200px;
     justify-content: center;
 }
@@ -1860,7 +1860,7 @@ align-items: end;
   .feedback-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+
   }
   
   .feedback-form label {
@@ -2231,7 +2231,7 @@ align-items: end;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.promo-content h2 {
+.promo-title{
     color: #104266;
     margin-bottom: 15px;
     font-size: 28px;
@@ -2305,7 +2305,7 @@ align-items: end;
   font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
   color: #333;
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.5);
@@ -3000,7 +3000,75 @@ align-items: end;
     --mobile-gap: 12px;
   }
 
+  .property-card{
+    width: 50%;
+  }
+
+  .text-contact{
+    font-size: 22px;
+  }
+
+  .about-section__advantages-title{
+    font-size: 22px;
+  }
+
+  .promo-content p {
+    font-size: 15px;
+  }
+
+  .partners__title{
+    font-size: 22px;
+  }
+
+  .property-card__section-title{
+    font-size: 22px;
+  }
+
+  .catalog-action-button{
+    font-size: 15px;
+  }
+
+  .property-card__subtitle{
+    font-size: 22px;
+  }
+
+  .catalog-action-button{
+    font-size: 15px;
+  }
+
+  .catalog-company{
+    font-size: 22px;
+  }
+
+  .about-section__title{
+    font-size: 22px;
+  }
+
+  .highlight{
+    font-size: 22px;
+  }
+
+  .text-contant-t{
+    font-size: 15px !important;
+  }
+
+  #address{
+    font-size: 20px;
+  }
+
+  .feedback-toggle-btn{
+    font-size: 15px;
+  }
+
+  .address-text{
+    font-size: 15px;
+  }
+
   .sale-p{
+    font-size: 15px;
+  }
+
+  .promo-title{
     font-size: 15px;
   }
 
@@ -3024,6 +3092,10 @@ align-items: end;
 
   .timer-text{
     font-size: 15px;
+  }
+
+  .comp{
+    font-size: 22px;
   }
   
   .container {
@@ -3160,7 +3232,7 @@ align-items: end;
   .sale-container {
     padding: var(--mobile-padding);
     margin-top: -5px; /* Убираем возможный зазор */
-    height: 550px;
+    height: 450px;
   }
   
   .sale-tanhouse {
@@ -3187,8 +3259,9 @@ align-items: end;
   
   .zvonok-podrobnie {
     align-self: flex-start;
-    padding: 10px 20px;
+    padding: 12px;
     margin-top: 8px;
+    font-size: 15px;
     display: flex;
     justify-content: center;
     margin-left: auto;
@@ -3196,8 +3269,12 @@ align-items: end;
   }
 
   .sale-tanhouse{
-    min-height: 250px;
-    height: 250px;
+    min-height: 400px;
+    height: 400px;
+  }
+
+  .feedback-toggle-btn{
+    padding: 12px;
   }
 
   /* О компании */
@@ -3207,14 +3284,72 @@ align-items: end;
   
   .company-text-p {
     margin-bottom: 15px;
+    font-size: 22px;
   }
+
+  .catalog-show-all{
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .cta-title{
+    font-size: 22px;
+  }
+
+  .election-tanhouse{
+    font-size: 22px;
+  }
+
+  .catalog-title{
+    font-size: 22px;
+  }
+
+  .property-button{
+    font-size: 15px;
+  }
+
+  #reviews{
+    font-size: 22px;
+  }
+
+  .rasrochka-p{
+    font-size: 22px;
+  }
+
+  .rasrochka-b{
+    font-size: 22px;
+  }
+
+  .rasrochka-c{
+    font-size: 22px;
+  }
+
+  .rasrochka-p{
+    font-size: 22px;
+  }
+
   
   .header-podrobnie-company-c {
-    width: 100%;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
     padding: 12px;
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    font-size: 15px;
+  }
+
+  .review-content{
+    font-size: 15px;
+  }
+
+  #views{
+    font-size: 22px;
+  }
+
+  .zayavka-text{
+    font-size: 22px;
   }
   
   /* Преимущества */
@@ -3275,7 +3410,7 @@ align-items: end;
   }
   
   .review-avatar {
-    width: 60px;
+    width: 80px;
     height: 60px;
     border-radius: 50%;
     object-fit: cover;
@@ -3285,6 +3420,7 @@ align-items: end;
   .review-author {
     text-align: center;
     margin-bottom: 10px;
+    font-size: 22px;
   }
   
   /* Контакты */

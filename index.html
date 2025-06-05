@@ -142,7 +142,7 @@
 </section>
 
     <section class="election container">
-    <h2>Почему стоит выбрать нас?</h2>
+    <h2 class="election-tanhouse">Почему стоит выбрать нас?</h2>
     <div class="election-blocks">
         <div class="feature-card">
             <div class="icon-circle">
@@ -244,8 +244,13 @@
 </div>
 
 <section id="feedback" class="feedback-section">
-            <h2 class="feedback-title">Обратная связь</h2>
+            <h2 class="feedback-title">Напишите нам ваши пожелания и наш менеджер свяжется с вами </h2>
             <form action="feedback.php" method="POST" id="feedback-form" class="feedback-form" autocomplete="off">
+                <label>
+                Заголовок:
+                <input type="text" id="title" name="heading" placeholder="Введите заголовок" required>
+                <div class="hint" id="title-hint"></div>
+            </label>
             <label>
                 Имя:
                 <input type="text" class="name" name="name" id="name" placeholder="Только буквы, от 1 до 12 символов" required>
