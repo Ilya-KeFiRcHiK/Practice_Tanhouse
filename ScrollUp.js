@@ -1,41 +1,25 @@
 document.addEventListener('DOMContentLoaded', function() {
     const scrollButton = document.getElementById('scrollUp');
-    let isScrolling = false;
     let scrollAnimation;
-    const scrollSpeed = 15;
-
-    function smoothScroll() {
-        if (!isScrolling) return;
-
+    
+    function scrollToTop() {
         const currentScroll = window.pageYOffset;
-
+        
         if (currentScroll > 0) {
-            window.scrollBy(0, -scrollSpeed);
-            scrollAnimation = requestAnimationFrame(smoothScroll);
+            window.scrollBy(0, -15);
+            scrollAnimation = requestAnimationFrame(scrollToTop);
         } else {
-            stopScrolling();
+            cancelAnimationFrame(scrollAnimation);
         }
     }
-
-    function stopScrolling() {
-        isScrolling = false;
-        cancelAnimationFrame(scrollAnimation);
-    }
-
+    
     scrollButton.addEventListener('click', function() {
-        if (!isScrolling) {
-            isScrolling = true;
-            smoothScroll();
-        }
+        cancelAnimationFrame(scrollAnimation); // Остановить предыдущую анимацию
+        scrollToTop();
     });
-
-    document.addEventListener('click', function(event) {
-        if (event.target !== scrollButton && !scrollButton.contains(event.target)) {
-            stopScrolling();
-        }
-    });
-
-    document.addEventListener('wheel', function() {
-        stopScrolling();
+    
+    // Остановить скролл при прокрутке колесиком
+    window.addEventListener('wheel', function() {
+        cancelAnimationFrame(scrollAnimation);
     });
 });

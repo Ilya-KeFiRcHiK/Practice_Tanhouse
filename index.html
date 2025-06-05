@@ -7,19 +7,19 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="img/transparter.png" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 <body>
 
-    <button class="scroll-button-up" id="scrollUp">
-    <svg viewBox="0 0 24 24">
-        <path d="M12 8l6 6H6z"/>
+    <button class="scroll-button-up" id="scrollUp" style="background: transparent;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00B0FF" class="bi bi-chevron-up" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
     </svg>
 </button>
     <header class="header">
-
     <div class="header-top container">
         <div class="header-logo">
-    <img class="logo-img" src="img/image 1 (9).svg" alt="Логотип ТаунхаусПремиум">
+    <a onclick="window.location.href='company.html'" class="header-link"><img class="logo-img" href="company.html" src="img/81485418.svg" alt="Логотип ТаунхаусПремиум"></a>
 </div>
         
         <div class="header-info">
@@ -33,50 +33,36 @@
                 <p class="address-center">Телефон</p>
                 <p class="address">+7 (963) 293-73-33</p>
             </div>
-            <div class="header-phone">
-                <img class="clock-icon" src="clock-with-white-face_icon-icons.com_72804 (1).png" alt="Иконка часов">
+            <div class="header-clock">
+                <img class="clock-icon" src="img/clock-with-white-face_icon-icons.com_72804 (3).png" alt="Иконка часов">
                 <p class="address-center">Режим работы</p>
                 <p class="address">пн-пт с 9:00 до 19:00</p>
-            </div>
+            </div> 
         </div>
+
         <button class="feedback-toggle-btn" id="feedbackToggleBtn">
         Заказать звонок <span class="icon"></span>
-    </button>
+    </button> 
+    </div>  
        
-             <!-- Кнопка для открытия/закрытия формы -->
     
-    
-    <!-- Контейнер формы -->
     <div class="feedback-form-container" id="feedbackFormContainer">
         <div class="feedback-form-header" id="feedbackFormHeader">
-            Напишите нам, и мы свяжемся с вами в удобное для вас время
-            <button class="close-btn" id="closeFeedbackForm">×</button>
+            Оставьте свои данные и наш менеджер свяжется с вами
         </div>
         
         <form action="feedback.php" method="POST" id="feedback-form" class="feedback-form" autocomplete="off">
-            <label>
-                Заголовок:
-                <input type="text" class="forms" id="title" name="heading" placeholder="Введите заголовок" required>
-                <div class="hint" id="title-hint"></div>
-            </label>
-        
             <label>
                 Имя:
                 <input type="text" class="name" name="name" id="name" placeholder="Только буквы, от 1 до 12 символов" required>
                 <div class="hint" id="name-hint"></div>
             </label>
-        
+
             <label>
-                Email:
-                <input type="text" id="email" name="email" placeholder="example@mail.com" required>
-                <div class="hint" id="email-hint"></div>
-            </label>
-        
-            <label class="forms">
-                Сообщение:
-                <input type="text" id="message" class="message" name="message" placeholder="Макс. 255 слов, предлоги и союзы учитываются" required></input>
-                <div class="hint" id="message-hint"></div>
-            </label>
+        Телефон:
+        <input type="tel" class="telefon-name" name="phone" id="phone" placeholder="+7 (___) ___-__-__" required>
+        <div class="hint" id="phone-hint"></div>
+        </label>
         
             <button class="blue-button" id="submit-btn" type="submit">Отправить</button>
         </form>
@@ -93,14 +79,14 @@
                     <li class="menu-color"><a href="#about">О компании</a></li>
                     <li class="menu-color"><a href="#reviews">Наши преимущества</a></li>
                     <li class="menu-color"><a href="#catalog">Каталог</a></li>
-                    <li class="menu-color"><a href="#message">Отзывы клиентоа</a></li>
+                    <li class="menu-color"><a href="#message">Отзывы клиентов</a></li>
                     <li class="menu-color"><a href="#address">Наш адрес</a></li>
                 </ul>
             </nav>
            <a onclick="window.location.href='contacts.html'" class="header-link">Контакты</a>
         </div>
 
-<div class="img-home parallax" style="background-image: url('img/4da73e45234489.582a187b547f0.jpg');"></div>
+<div class="img-home parallax" style="background-image: url('img/e3f3dc517ec08cf38a70b364f6e29d3abf9f2ff4.jpg');"></div>
         <div class="sale-container">
     <div class="sale-tanhouse">
         <h3 class="sale-tanhouse-p">Продажа таунхаусов</h3>
@@ -117,57 +103,67 @@
         </div>
     </div>
 </div>
-        
+
     </header>
 
     <section class="Company parallax" style="background-image: url(img/4da73e45234489.582a187b547f0.jpg);">
         <div class="company-text">
             <h3 id="about" class="comp">О компании</h3>
             <p class="company-text-p">Компания <b><span style="color: #176297;">ТаунхаусПремиум</span></b> предлагает комплексное <br> сопровождение при поиске и приобретении <br> недвижимости в Калининграде и Калининградской области. <br>
-<b><span style="color: #176297;">Таунхаусы</span></b> - выбор для вашего комфорта. <br>
-Подбираем идеальное жильё от бюджетных вариантов
-до премиум-класса. <br>
-Наши квалифицированные специалисты всегда в <br> курсе актуального наличия и стоимости.</p>
+<b><span style="color: #176297;">Таунхаусы</span></b> - выбор для вашего комфорта. <br></p>
 <button onclick="window.location.href='company.html'" class="header-podrobnie-company-c">Подробнее</button>
         </div>
     </section>
 
     <section class="preimyczestva container">
-        <h2 id="reviews">Наши преимущества</h2>
-        <div class="preimyczestva-blocks">
+    <h2 id="reviews">Наши преимущества</h2>
+    <div class="preimyczestva-blocks">
         <div class="block-1">
+            <i class="bi bi-calendar-check fs-1"></i>
             <p class="rasrochka">РАССРОЧКА ОТ ЗАСТРОЙЩИКА</p> <br>
-            <P class="rasrochka-p">Подберем для вас индивидуальные условия</P>
+            <P class="rasrochka-p">Подберём для вас индивидуальные условия</P>
         </div>
         <div class="block-2">
+            <i class="bi bi-cash-coin fs-1"></i>
             <p class="rasrochka">100% ОПЛАТА</p> <br>
-            <P class="rasrochka-b">Оплата наличными или перевод на расчетный счет, указанный в договоре</P>
+            <P class="rasrochka-b">Оплата наличными или перевод на расчётный счёт, указанный в договоре</P>
         </div>
         <div class="block-3">
+            <i class="bi bi-house-check fs-1"></i>
             <p class="rasrochka">ИПОТЕКА</p> <br>
             <P class="rasrochka-c">Льготная военная ипотека для сотрудников работающих по контракту</P>
         </div>
         <div class="block-4">
+            <i class="bi bi-people fs-1"></i>
             <p class="rasrochka">МАТЕРИНСКИЙ КАПИТАЛ</p> <br>
-            <P class="rasrochka-p">Материнский капитал <br> подходит для <br> приобретения наших <br> домов​.</P>
+            <P class="rasrochka-p">Материнский капитал <br> подходит для <br> приобретения наших <br> домов​</P>
         </div>
-        </div>
-    </section>
+    </div>
+</section>
 
     <section class="election container">
-        <h2>Почему стоит выбрать нас?</h2>
-        <div class="election-blocks">
-        <div class="text-1">
-           <p><b>10</b> <br> лет <br> на рынке <br> недвижимости</p>
+    <h2>Почему стоит выбрать нас?</h2>
+    <div class="election-blocks">
+        <div class="feature-card">
+            <div class="icon-circle">
+                <i class="bi bi-check-circle"></i>
+            </div>
+            <p><b>10</b> <br> лет <br> на рынке <br>недвижимости</p>
         </div>
-        <div class="text-2">
-            <p><b>45</b> <br> семей <br> успешно приобрели <br> наши таунхаусы</p>
+        <div class="feature-card">
+            <div class="icon-circle">
+                <i class="bi bi-check-circle"></i>
+            </div>
+            <p><b>45</b> <br> семей <br> успешно приобрели <br>наши таунхаусы</p>
         </div>
-        <div class="text-3">
-            <p><b>100%</b> <br> довольных <br> клиентов <br> своим новым <br> домом</p>
+        <div class="feature-card">
+            <div class="icon-circle">
+                <i class="bi bi-check-circle"></i>
+            </div>
+            <p><b>100%</b> <br> довольных <br> клиентов <br>своим новым <br>домом</p>
         </div>
-        </div>
-    </section>
+    </div>
+</section>
 
     <section class="catalog container">
     <h2 id="catalog" class="catalog-title">Каталог</h2>
@@ -240,11 +236,38 @@
     
     <div class="catalog-cta" style="display: flex; flex-direction: column; gap: 8px;">
         <h2 class="cta-title" style="margin: 0;">Хотите купить дом у нас?</h2>
-        <p class="cta-description" style="margin: 0;">Отправьте нам заявку и мы отправим вам наши предложения</p>
-        <button class="cta-button" style="align-self: flex-start;">Связаться</button>
+        <p class="zayavka-text">Подбираем идеальное жильё от бюджетных вариантов
+до премиум-класса. <br>
+Наши квалифицированные специалисты всегда в <br> курсе актуального наличия и стоимости.</p>
+<button onclick="window.location.href='catalog.html'" class="catalog-show-all">Оставить заявку</button>
     </div>
 </div>
-</section>
+
+<section id="feedback" class="feedback-section">
+            <h2 class="feedback-title">Обратная связь</h2>
+            <form action="feedback.php" method="POST" id="feedback-form" class="feedback-form" autocomplete="off">
+            <label>
+                Имя:
+                <input type="text" class="name" name="name" id="name" placeholder="Только буквы, от 1 до 12 символов" required>
+                <div class="hint" id="name-hint"></div>
+            </label>
+        
+            <label>
+                Email:
+                <input type="text" id="email" name="email" placeholder="example@mail.com" required>
+                <div class="hint" id="email-hint"></div>
+            </label>
+        
+            <label>
+                Сообщение:
+                <textarea id="message" name="message" placeholder="Макс. 255 слов, предлоги и союзы учитываются" required></textarea>
+                <div class="hint" id="message-hint"></div>
+            </label>
+        
+            <button id="submit-btn" type="submit">Отправить</button>
+            </form>
+          </section>
+
 <h2 id="message">Отзывы клиентов</h2>
     <section id="reviews" class="reviews-section">
   <div class="swiper mySwiper">
@@ -303,6 +326,8 @@
   </div>
 </section>
 
+
+
 <section class="address">
     <h2 id="address">Наш адрес</h2>
     <p class="address-text">ул Шиллера, 25А, офис 7</p>
@@ -310,7 +335,7 @@
 </section>
 
 <section class="contacts-section">
-    <div class="contact-container container">
+    <div class="contact-container">
         <div class="contact-item">
             <img src="img/phone 1.png" alt="Телефон" class="contact-icon">
             <div class="contact-info">
@@ -352,10 +377,10 @@
         </div>
 
         <div class="footer-social">
-            <a href="#" class="social-link" aria-label="WhatsApp">
+            <a href="https://chat.whatsapp.com/FykP4lHlTL67JI23oEiik0" class="social-link" aria-label="WhatsApp">
                 <img src="img/whatsapp.png" alt="WhatsApp">
             </a>
-            <a href="#" class="social-link" aria-label="Telegram">
+            <a href="https://t.me/+3aRsxDu8VURhNzhi" class="social-link" aria-label="Telegram">
                 <img src="img/telegram 1.png" alt="Telegram">
             </a>
             <a href="#" class="social-link-v" aria-label="ВКонтакте">
@@ -365,11 +390,11 @@
     </div>
 </footer>
 </body>
-<script src="ScrollDown.js"></script>
 <script src="ScrollUp.js"></script>
-<script src="script.js"></script>
+<script src="../script.js"></script>
 <script src="timer.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="svazat.js"></script>
 <script>
     var swiper = new Swiper(".mySwiper", {
       navigation: {
@@ -378,56 +403,120 @@
       },
     });
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Получаем элементы
-    const toggleBtn = document.getElementById('feedbackToggleBtn');
+  
+    document.addEventListener('DOMContentLoaded', () => {
     const formContainer = document.getElementById('feedbackFormContainer');
-    const closeBtn = document.getElementById('closeFeedbackForm');
-    const formHeader = document.getElementById('feedbackFormHeader');
+    if (!formContainer) return console.error('Form container not found!');
+
+    document.getElementById('feedbackToggleBtn')?.addEventListener('click', () => 
+        formContainer.classList.toggle('visible')
+    );
     
-    // Проверяем, что элементы существуют
-    if (!toggleBtn || !formContainer || !closeBtn || !formHeader) {
-        console.error('One or more elements not found!');
-        return;
-    }
-    
-    // Открытие/закрытие формы
-    toggleBtn.addEventListener('click', function() {
-        formContainer.classList.toggle('visible');
-    });
-    
-    // Закрытие формы по крестику
-    closeBtn.addEventListener('click', function(e) {
+    document.getElementById('closeFeedbackForm')?.addEventListener('click', (e) => {
         e.stopPropagation();
         formContainer.classList.remove('visible');
     });
     
-    // Закрытие формы по клику на заголовок
-    formHeader.addEventListener('click', function(e) {
-        if (e.target === this) { // Проверяем, что кликнули именно на заголовок
-            formContainer.classList.remove('visible');
-        }
-    });
+    document.getElementById('feedbackFormHeader')?.addEventListener('click', (e) => 
+        e.target === e.currentTarget && formContainer.classList.remove('visible')
+    );
     
-    // Валидация поля имени
     const nameInput = document.getElementById('name');
     const nameHint = document.getElementById('name-hint');
-    
-    if (nameInput && nameHint) {
-        nameInput.addEventListener('input', function() {
-            const value = this.value;
-            if (!/^[a-zA-Zа-яА-ЯёЁ\s]+$/.test(value)) {
-                nameHint.textContent = 'Только буквы разрешены';
-                this.style.borderColor = 'red';
-            } else if (value.length > 12) {
-                nameHint.textContent = 'Максимум 12 символов';
-                this.style.borderColor = 'red';
-            } else {
-                nameHint.textContent = '';
-                this.style.borderColor = '#ddd';
-            }
-        });
-    }
+    nameInput?.addEventListener('input', () => {
+        const value = nameInput.value;
+        const isValid = /^[a-zA-Zа-яА-ЯёЁ\s]+$/.test(value) && value.length <= 12;
+        nameHint.textContent = isValid ? '' : 
+            !/^[a-zA-Zа-яА-ЯёЁ\s]+$/.test(value) ? 'Только буквы разрешены' : 'Максимум 12 символов';
+        nameInput.style.borderColor = isValid ? '#ddd' : 'red';
+    });
 });
-  </script>
-</html>
+
+const title = document.getElementById('title');
+const nameInput = document.getElementById('name');
+const email = document.getElementById('email');
+const message = document.getElementById('message');
+const btn = document.getElementById('submit-btn');
+
+const titleHint = document.getElementById('title-hint');
+const nameHint = document.getElementById('name-hint');
+const emailHint = document.getElementById('email-hint');
+const messageHint = document.getElementById('message-hint');
+
+const maxWords = 255;
+
+[title, nameInput, email, message].forEach(input => {
+input.addEventListener('paste', e => e.preventDefault());
+input.addEventListener('contextmenu', e => e.preventDefault());
+});
+
+function validate() {
+    let valid = true;
+    if (title.value.trim().length === 0) {
+        title.className = 'invalid';
+        titleHint.textContent = 'Поле обязательно';
+        titleHint.style.color = 'red';
+        valid = false;
+    } else {
+        title.className = 'valid';
+        titleHint.textContent = 'Ок';
+        titleHint.style.color = 'green';
+    }
+
+    const nameValue = nameInput.value.trim();
+    const nameRegex = /^[а-яА-ЯёЁa-zA-Z]{1,12}$/;
+
+    if (!nameRegex.test(nameValue)) {
+        nameInput.className = 'invalid';
+        nameHint.textContent = `Недопустимые символы или длина. Осталось ${12 - nameValue.length} символов.`;
+        nameHint.style.color = 'red';
+        valid = false;
+    } else {
+        nameInput.className = 'valid';
+        nameHint.textContent = 'Имя корректно';
+        nameHint.style.color = 'green';
+    }
+
+    if (!email.value.includes('@')) {
+        email.className = 'invalid';
+        emailHint.textContent = 'Неверный email (отсутствует @)';
+        emailHint.style.color = 'red';
+        valid = false;
+    } else {
+        email.className = 'valid';
+        emailHint.textContent = 'Email корректен';
+        emailHint.style.color = 'green';
+    }
+
+    const wordCount = message.value.trim().split(/\s+/).filter(Boolean).length;
+    if (wordCount === 0) {
+        message.className = 'invalid';
+        messageHint.textContent = 'Введите сообщение';
+        messageHint.style.color = 'red';
+        valid = false;
+    } else if (wordCount > maxWords) {
+        message.className = 'invalid';
+        messageHint.textContent = `Слишком много слов: ${wordCount}/${maxWords}`;
+        messageHint.style.color = 'red';
+        valid = false;
+    } else {
+        message.className = 'valid';
+        messageHint.textContent = `Слов: ${wordCount}/${maxWords}`;
+        messageHint.style.color = 'green';
+    }
+
+    btn.disabled = !valid;
+}
+
+[title, nameInput, email, message].forEach(input => {
+    input.addEventListener('input', validate);
+});
+
+[title, nameInput, email, message].forEach(input => {
+    input.addEventListener('keydown', e => {
+        if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'v') {
+            e.preventDefault();
+        }
+    });
+});
+</script>

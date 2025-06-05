@@ -10,15 +10,15 @@
 </head>
 <body>
         </div>
-        <div class="scroll-buttons-container">
-    <button class="scroll-button-up" id="scrollUp">
-        <svg viewBox="0 0 24 24"><path d="M12 8l6 6H6z"/></svg>
-    </button>
-</div>
+        <button class="scroll-button-up" id="scrollUp" style="background: transparent;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00B0FF" class="bi bi-chevron-up" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+    </svg>
+</button>
     <header class="header">
     <div class="header-top container">
         <div class="header-logo">
-    <img class="logo-img" src="img/image 1 (9).svg" alt="Логотип ТаунхаусПремиум">
+    <img class="logo-img" src="img/81485418.svg" alt="Логотип ТаунхаусПремиум">
 </div>
         
         <div class="header-info">
@@ -33,37 +33,64 @@
                 <p class="address">+7 (963) 293-73-33</p>
             </div>
             <div class="header-phone">
-                <img class="clock-icon" src="clock-with-white-face_icon-icons.com_72804 (1).png" alt="Иконка часов">
+                <img class="clock-icon" src="img/clock-with-white-face_icon-icons.com_72804 (1).png" alt="Иконка часов">
                 <p class="address-center">Режим работы</p>
                 <p class="address">пн-пт с 9:00 до 19:00</p>
             </div>
         </div>
         
-        <button class="header-zvonok">Заказать звонок</button>
+        <button class="feedback-toggle-btn" id="feedbackToggleBtn">
+        Заказать звонок <span class="icon"></span>
+    </button>
+
+        
+        <div class="feedback-form-container" id="feedbackFormContainer">
+        <div class="feedback-form-header" id="feedbackFormHeader">
+            Оставьте свои данные и наш менеджер свяжется с вами
+            <button class="close-btn" id="closeFeedbackForm">×</button>
+        </div>
+        
+        <form action="feedback.php" method="POST" id="feedback-form" class="feedback-form" autocomplete="off">
+            <label>
+                Имя:
+                <input type="text" class="name" name="name" id="name" placeholder="Только буквы, от 1 до 12 символов" required>
+                <div class="hint" id="name-hint"></div>
+            </label>
+
+            <label>
+        Телефон:
+        <input type="tel" name="phone" id="phone" placeholder="+7 (___) ___-__-__" required>
+        <div class="hint" id="phone-hint"></div>
+        </label>
+        
+            <button class="blue-button" id="submit-btn" type="submit">Отправить</button>
+        </form>
+    </div>
+        </button>
+    </div>
     </div>
 </header>
 
         <div class="header-bottom container">
-           <a class="header-link" href="">Главная</a>
-           <a class="header-link" href="">Меню</a>
-           <nav class="header-nav">
-             <ul class="header-ul">
-              <li class="header-li"><a class="" href="">О компании</a></li>
-              <li class="header-li"><a class="" href="">Наши преимущества</a></li>
-              <li class="header-li"><a href="">Каталог</a></li>
-              <li class="header-li"><a href="">Отзывы</a></li>
-              <li class="header-li"><a href="">Акции</a></li>
-              <li class="header-li"><a href="">Контакты</a></li>
-            </ul>
-           </nav>
-           <a class="header-link" href="">Контакты</a>
+           <a class="header-link" onclick="window.location.href='index.html'">Главная</a>
+           <nav class="dropdown-nav">
+                <button id="menu-toggle">Меню</button>
+                <ul class="menu-list" id="menu-list">
+                    <li class="menu-color"><a href="#about">О компании</a></li>
+                    <li class="menu-color"><a href="#reviews">Наши преимущества</a></li>
+                    <li class="menu-color"><a href="#catalog">Каталог</a></li>
+                    <li class="menu-color"><a href="#message">Отзывы клиентов</a></li>
+                    <li class="menu-color"><a href="#address">Наш адрес</a></li>
+                </ul>
+            </nav>
+           <a class="header-link" href="contacts.html">Контакты</a>
         </div>
-<div class="img-home parallax" style="background-image: url('img/4da73e45234489.582a187b547f0.jpg');"></div>
+<div class="img-home parallax" style="background-image: url('img/e3f3dc517ec08cf38a70b364f6e29d3abf9f2ff4.jpg');"></div>
 
         <section class="about-section">
   <div class="about-section__container">
     <header class="about-section__header">
-      <h2 class="about-section__title">О компании</h2>
+      <h2 id="about" class="about-section__title">О компании</h2>
     </header>
     
     <div class="about-section__content">
@@ -271,10 +298,10 @@
         </div>
 
         <div class="footer-social">
-            <a href="#" class="social-link" aria-label="WhatsApp">
+            <a href="https://chat.whatsapp.com/FykP4lHlTL67JI23oEiik0" class="social-link" aria-label="WhatsApp">
                 <img src="img/whatsapp.png" alt="WhatsApp">
             </a>
-            <a href="#" class="social-link" aria-label="Telegram">
+            <a href="https://t.me/+3aRsxDu8VURhNzhi" class="social-link" aria-label="Telegram">
                 <img src="img/telegram 1.png" alt="Telegram">
             </a>
             <a href="#" class="social-link-v" aria-label="ВКонтакте">
@@ -286,9 +313,61 @@
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="ScrollDown.js"></script>
 <script src="ScrollUp.js"></script>
-<script src="../script.js"></script>
+<script src="script.js"></script>
+<script>
+ document.addEventListener('DOMContentLoaded', function() {
+    // Получаем элементы
+    const toggleBtn = document.getElementById('feedbackToggleBtn');
+    const formContainer = document.getElementById('feedbackFormContainer');
+    const closeBtn = document.getElementById('closeFeedbackForm');
+    const formHeader = document.getElementById('feedbackFormHeader');
+    
+    // Проверяем, что элементы существуют
+    if (!toggleBtn || !formContainer || !closeBtn || !formHeader) {
+        console.error('One or more elements not found!');
+        return;
+    }
+    
+    // Открытие/закрытие формы
+    toggleBtn.addEventListener('click', function() {
+        formContainer.classList.toggle('visible');
+    });
+    
+    // Закрытие формы по крестику
+    closeBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        formContainer.classList.remove('visible');
+    });
+    
+    // Закрытие формы по клику на заголовок
+    formHeader.addEventListener('click', function(e) {
+        if (e.target === this) { // Проверяем, что кликнули именно на заголовок
+            formContainer.classList.remove('visible');
+        }
+    });
+    
+    // Валидация поля имени
+    const nameInput = document.getElementById('name');
+    const nameHint = document.getElementById('name-hint');
+    
+    if (nameInput && nameHint) {
+        nameInput.addEventListener('input', function() {
+            const value = this.value;
+            if (!/^[a-zA-Zа-яА-ЯёЁ\s]+$/.test(value)) {
+                nameHint.textContent = 'Только буквы разрешены';
+                this.style.borderColor = 'red';
+            } else if (value.length > 12) {
+                nameHint.textContent = 'Максимум 12 символов';
+                this.style.borderColor = 'red';
+            } else {
+                nameHint.textContent = '';
+                this.style.borderColor = '#ddd';
+            }
+        });
+    }
+});
+</script>
 </html>
 </body>
 </html>

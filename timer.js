@@ -20,3 +20,4 @@ const targetDate = new Date("august 31, 2025 00:00:00").getTime();
 
   updateCountdown();
   setInterval(updateCountdown, 1000);
+
