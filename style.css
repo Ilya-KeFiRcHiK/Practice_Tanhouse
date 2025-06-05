@@ -229,7 +229,7 @@ form{
             border-radius: 10px 10px 0 0;
             box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.15);
             transition: bottom 0.4s ease-out;
-            z-index: 999;
+            z-index: 1001;
             overflow: hidden;
         }
 
@@ -254,7 +254,7 @@ form{
         }
 
         .property-photo{
-          width: 800px; height: 520px;
+          width: 100%;
         }
 
         .message{
@@ -342,13 +342,21 @@ form{
 
       
         .feedback-section {
-             max-width: 400px;
-    margin: 40px auto;
-    padding: 30px;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    position: fixed;
+            bottom: -800px;
+            right: 30px;
+            width: 345px;
+            background-color: white;
+            border-radius: 10px 10px 0 0;
+            box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.15);
+            transition: bottom 0.4s ease-out;
+            z-index: 1001;
+            overflow: hidden;
+
+        }
+
+        .feedback-section.visible{
+            bottom: 100px;
         }
 
         .feedback-form {
@@ -635,7 +643,6 @@ form{
     position: relative;
     background: #ffffff;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    padding: 15px 0;
     z-index: 100;
 }
 
@@ -668,6 +675,9 @@ form{
 .menu-color{
   background: white;
   color: black;
+  border-bottom: 0.1px solid black;
+  border-left: 0.1px solid black;
+  border-right: 0.1px solid black;
 }
 
 .menu-color:hover{
@@ -876,10 +886,6 @@ iframe{
     display: block;
   }
   
-  .menu-list li {
-    border-bottom: 1px solid #eee;
-  }
-
   .timer {
     color: #095a94;
     display: flex;
@@ -890,10 +896,6 @@ iframe{
     margin-top: 70px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
-  
-  .menu-list li:last-child {
-    border-bottom: none;
-  }
 
   .megatimer-container {
     max-width: 600px;
@@ -969,6 +971,10 @@ iframe{
         color: white;
         font-size: 1.8rem;
         box-shadow: 0 2px 8px #104266;
+    }
+
+    .icon-circle i{
+      height: auto;
     }
     
     .feature-card p {
@@ -1550,17 +1556,16 @@ h2{
 .review-card {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   gap: 20px;
   max-width: 1000px;
-  height: 450px;
   margin: 0 auto;
   padding: 25px;
   background-image: url(img/6ed89b37c942b597b9887b19c73da8a8.jpg);
   background-repeat: no-repeat;
   background: white;
   border-radius: 12px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .review-content-wrapper {
@@ -2949,6 +2954,10 @@ align-items: end;
     justify-content: center;
   }
 
+  .bi{
+    height: 70px;
+  }
+
   .header-address{
     padding-left: 40px;
     padding-right: 40px;
@@ -2990,11 +2999,31 @@ align-items: end;
     --mobile-padding: 15px;
     --mobile-gap: 12px;
   }
+
+  .sale-p{
+    font-size: 15px;
+  }
+
+  .sale-tanhouse-p{
+    font-size: 22px;
+  }
   
   body {
     font-size: 15px; /* Немного увеличил для читабельности */
     line-height: 1.4;
     -webkit-text-size-adjust: 100%; /* Предотвращает авто-масштабирование текста на iOS */
+  }
+
+  .timer{
+    font-size: 15px !important;
+  }
+
+  .footer-copyright p{
+    padding-left: 0;
+  }
+
+  .timer-text{
+    font-size: 15px;
   }
   
   .container {
@@ -3115,6 +3144,17 @@ align-items: end;
     width: 100%;
     object-fit: cover;
     object-position: center;
+    min-height: 300px;
+  }
+
+  iframe{
+    height: 300px;
+  }
+
+  .footer-social{
+    display: flex;
+    justify-content: center;
+    padding-right: 0;
   }
   
   .sale-container {
@@ -3126,6 +3166,7 @@ align-items: end;
   .sale-tanhouse {
     padding: 15px;
     border-radius: 8px;
+    height: 500px;
   }
   
   .sale-content {
@@ -3155,8 +3196,8 @@ align-items: end;
   }
 
   .sale-tanhouse{
-    min-height: 350px;
-    height: 350px;
+    min-height: 250px;
+    height: 250px;
   }
 
   /* О компании */

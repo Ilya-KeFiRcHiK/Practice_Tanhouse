@@ -79,7 +79,7 @@
                     <li class="menu-color"><a href="#about">О компании</a></li>
                     <li class="menu-color"><a href="#reviews">Наши преимущества</a></li>
                     <li class="menu-color"><a href="#catalog">Каталог</a></li>
-                    <li class="menu-color"><a href="#message">Отзывы клиентов</a></li>
+                    <li class="menu-color"><a href="#views">Отзывы клиентов</a></li>
                     <li class="menu-color"><a href="#address">Наш адрес</a></li>
                 </ul>
             </nav>
@@ -165,7 +165,7 @@
     </div>
 </section>
 
-    <section class="catalog container">
+    <section class="catalog">
     <h2 id="catalog" class="catalog-title">Каталог</h2>
     
     <div class="property-grid">
@@ -239,7 +239,7 @@
         <p class="zayavka-text">Подбираем идеальное жильё от бюджетных вариантов
 до премиум-класса. <br>
 Наши квалифицированные специалисты всегда в <br> курсе актуального наличия и стоимости.</p>
-<button onclick="window.location.href='catalog.html'" class="catalog-show-all">Оставить заявку</button>
+<button class="catalog-show-all" id="zayavka-show-all">Оставить заявку</button>
     </div>
 </div>
 
@@ -268,8 +268,8 @@
             </form>
           </section>
 
-<h2 id="message">Отзывы клиентов</h2>
-    <section id="reviews" class="reviews-section">
+<h2 id="views">Отзывы клиентов</h2>
+    <section class="reviews-section">
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
@@ -383,7 +383,7 @@
             <a href="https://t.me/+3aRsxDu8VURhNzhi" class="social-link" aria-label="Telegram">
                 <img src="img/telegram 1.png" alt="Telegram">
             </a>
-            <a href="#" class="social-link-v" aria-label="ВКонтакте">
+            <a href="https://ilya-kefirchik.github.io/Practice_Tanhouse/" class="social-link-v" aria-label="ВКонтакте">
                 <img class="social-link-v" src="img/V_kontakte_1_.png" alt="ВКонтакте">
             </a>
         </div>
@@ -410,6 +410,13 @@
 
     document.getElementById('feedbackToggleBtn')?.addEventListener('click', () => 
         formContainer.classList.toggle('visible')
+    );
+
+    const formzayavka = document.getElementById('feedback');
+    if (!formzayavka) return console.error('Form zayavka not found!');
+
+    document.getElementById('zayavka-show-all')?.addEventListener('click', () => 
+        formzayavka.classList.toggle('visible')
     );
     
     document.getElementById('closeFeedbackForm')?.addEventListener('click', (e) => {
