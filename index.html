@@ -109,8 +109,8 @@
     <section class="Company parallax" style="background-image: url(img/4da73e45234489.582a187b547f0.jpg);">
         <div class="company-text">
             <h3 id="about" class="comp">О компании</h3>
-            <p class="company-text-p">Компания <b><span style="color: #176297;">ТаунхаусПремиум</span></b> предлагает комплексное <br> сопровождение при поиске и приобретении <br> недвижимости в Калининграде и Калининградской области. <br>
-<b><span style="color: #176297;">Таунхаусы</span></b> - выбор для вашего комфорта. <br></p>
+            <p class="company-text-p">Компания ООО "ТаунхаусПремиум" предлагает комплексное сопровождение при поиске и приобретении недвижимости в Калининграде и Калининградской области. <br>
+Таунхаусы - выбор для вашего комфорта.</p>
 <button onclick="window.location.href='company.html'" class="header-podrobnie-company-c">Подробнее</button>
         </div>
     </section>
@@ -396,7 +396,7 @@
 </footer>
 </body>
 <script src="ScrollUp.js"></script>
-<script src="../script.js"></script>
+<script src="script.js"></script>
 <script src="timer.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="svazat.js"></script>
@@ -407,6 +407,17 @@
         prevEl: ".swiper-button-prev",
       },
     });
+
+    document.querySelector("#menu-toggle").addEventListener("click", function(e){
+    const menuList = document.querySelector(".menu-list");
+    if (menuList.classList.contains('show')) {
+        menuList.classList.remove("show");
+    } else {
+        menuList.classList.add("show");
+    }
+});
+
+
 
   
     document.addEventListener('DOMContentLoaded', () => {

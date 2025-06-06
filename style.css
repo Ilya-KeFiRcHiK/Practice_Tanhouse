@@ -675,9 +675,9 @@ form{
 .menu-color{
   background: white;
   color: black;
-  border-bottom: 0.1px solid black;
-  border-left: 0.1px solid black;
-  border-right: 0.1px solid black;
+  border-bottom: 0.1px solid grey;
+  border-left: 0.1px solid grey;
+  border-right: 0.1px solid grey;
 }
 
 .menu-color:hover{
@@ -749,6 +749,8 @@ form{
   font-size: 25px;
 }
 
+
+
     .logo-title {
         margin: 0;
         font-size: 24px;
@@ -774,9 +776,22 @@ form{
   transition: transform 0.3s ease, opacity 0.3s ease; 
 }
 
-
-.header-address, .header-phone, .header-clock {
+.header-address{
     text-align: center;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.header-phone{
+    text-align: center;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.header-clock{
+  text-align: center;
     justify-content: space-between;
     padding-left: 50px;
     padding-right: 50px;
@@ -857,9 +872,9 @@ iframe{
   }
 
   #menu-toggle {
-    padding: 10px 20px;
+    padding: 15px;
     font-size: 20px;
-    background: #095a94;
+    background: #176297;
     color: #fff;
     border: none;
     border-radius: 6px;
@@ -874,13 +889,10 @@ iframe{
     top: 45px;
     left: 0;
     display: none;
-    background: #fff;
-    border: 1px solid black;
     border-radius: 6px;
     min-width: 300px;
     z-index: 1000;
   }
-
 
   .menu-list.show {
     display: block;
@@ -954,6 +966,7 @@ iframe{
         border-radius: 12px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         transition: transform 0.3s ease;
+        font-family: 'Montserrat';
     }
     
     .feature-card:hover {
@@ -978,7 +991,7 @@ iframe{
     }
     
     .feature-card p {
-        font-size: 1.1rem;
+        font-size: 20px;
         line-height: 1.6;
         color: #495057;
         margin-top: 15px;
@@ -1001,7 +1014,7 @@ h1{
 
 .sale-tanhouse{
     border-radius: 12px;
-    padding: 25px;
+    padding: 20px;
     max-width: 650px;
     min-height: 450px;
     text-align: center;
@@ -1159,16 +1172,17 @@ h3{
 
 .company-text{
     background-color: #f0f0f0;
-    padding-bottom: 30px;
+    padding-bottom: 60px;
 }
 
 .company-text-p{
     font-size: 30px;
-    padding-top: 30px;
     max-width: 1020px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    text-align: center;
 }
 
 h3{
@@ -1346,21 +1360,21 @@ h2{
 
 .rasrochka{
     font-weight: bold;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .rasrochka-b{
-    font-size: 30px;
-    margin-top: 25px;
+    font-size: 25px;
+    margin-top: 40px;
 }
 
 .rasrochka-c{
-    font-size: 30px;
-    margin-top: 25px;
+    font-size: 25px;
+    margin-top: 40px;
 }
 
 .rasrochka-p{
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .text-1{
@@ -1504,6 +1518,10 @@ h2{
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+#reviews{
+  padding: 40px;
 }
 
 .reviews-section {
@@ -1761,15 +1779,8 @@ align-items: end;
 .contacts-section {
     background-color: rgb(41, 41, 41);
     color: white;
-    padding: 40px 0;
-}
-
-.contact-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin: 0 auto;
-    padding: 0 20px;
+    padding: 60px 0;
+    justify-content: center;
 }
 
 .contacts-container {
@@ -1778,12 +1789,15 @@ align-items: end;
   padding: 2rem;
 }
 
+.contact-info{
+  display: flex;
+  justify-content: center;
+}
+
 .contact-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 15px;
+  display: flex;
+  padding-left: auto;
+  padding-right: auto;
 }
 
 .contact-grid {
@@ -1793,28 +1807,35 @@ align-items: end;
 }
 
 .contact-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  color: #176297;
-  flex-shrink: 0;
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #2c3e50;
+    margin-top: 0.125rem;
+}
+
+.contact-value a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 .contact-label {
-  font-size: 15px;
-  font-weight: 500;
-  color: #333;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
 }
 
 .contact-value {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.5;
-  font-family: 'montserrat';
+    font-size: 1rem;
+    color: #34495e;
+    margin: 0;
+}
+
+.contact-value a:hover {
+    color: #2980b9;
+    text-decoration: underline;
 }
 
 /* Стили модального окна */
@@ -1935,9 +1956,9 @@ align-items: end;
 }
 
 .contact-details {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
 }
 
 .contact-icon svg {
@@ -3001,11 +3022,28 @@ align-items: end;
   }
 
   .property-card{
-    width: 50%;
+    width: 75%;
+  }
+
+  .menu-color{
+    font-size: 15px;
+    width: 200px;
+  }
+
+  #menu-list{
+    width: 200px;
   }
 
   .text-contact{
     font-size: 22px;
+  }
+
+  #about{
+    font-size: 22px;
+  }
+
+  #reviews{
+    font-size: 15px;
   }
 
   .about-section__advantages-title{
@@ -3073,7 +3111,7 @@ align-items: end;
   }
 
   .sale-tanhouse-p{
-    font-size: 22px;
+    font-size: 20px;
   }
   
   body {
@@ -3161,16 +3199,26 @@ align-items: end;
   .header-bottom {
     flex-wrap: wrap;
     padding: 5px 0;
+    display: flex;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+    z-index: 50;
   }
   
   .mobile-menu-toggle {
     display: block;
     order: 1;
     width: 100%;
+    font-size: 15px;
     text-align: center;
     padding: 10px;
     background-color: #f5f5f5;
     border: none;
+  }
+
+  #menu-toggle{
+    font-size: 15px;
   }
   
   .mobile-menu-toggle:hover {
@@ -3201,7 +3249,7 @@ align-items: end;
   
   .header-link,
   .header-li a {
-    padding: 8px 5px;
+    padding: 15px 15px;
     font-size: 14px;
   }
   
@@ -3284,7 +3332,7 @@ align-items: end;
   
   .company-text-p {
     margin-bottom: 15px;
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .catalog-show-all{
@@ -3313,19 +3361,19 @@ align-items: end;
   }
 
   .rasrochka-p{
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .rasrochka-b{
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .rasrochka-c{
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .rasrochka-p{
-    font-size: 22px;
+    font-size: 20px;
   }
 
   
@@ -3420,7 +3468,7 @@ align-items: end;
   .review-author {
     text-align: center;
     margin-bottom: 10px;
-    font-size: 22px;
+    font-size: 15px;
   }
   
   /* Контакты */
