@@ -24,7 +24,7 @@
         
         <div class="header-info">
             <div class="header-address">
-                <img class="map-icon" src="img/geo-alt-fill (1) 1.png" alt="Иконка карты">
+                <img href="#address-map" class="map-icon" src="img/geo-alt-fill (1) 1.png" alt="Иконка карты">
                 <p class="address-center">Адрес</p>
                 <p class="address">ул. Шиллера, 25А</p>
             </div>
@@ -80,7 +80,6 @@
                     <li class="menu-color"><a href="#reviews">Наши преимущества</a></li>
                     <li class="menu-color"><a href="#catalog">Каталог</a></li>
                     <li class="menu-color"><a href="#views">Отзывы клиентов</a></li>
-                    <li class="menu-color"><a href="#address">Наш адрес</a></li>
                 </ul>
             </nav>
            <a onclick="window.location.href='contacts.html'" class="header-link">Контакты</a>
@@ -169,66 +168,106 @@
     <h2 id="catalog" class="catalog-title">Каталог</h2>
     
     <div class="property-grid">
-        <article class="property-card">
-            <div class="property-image-container">
-                <img src="img/16e23c2aed0d43fd8d1ae456e01abe4e.webp" 
-                     alt="Таунхаус в Калининграде" 
-                     class="property-image"
-                     width="300"
-                     height="225"
-                     loading="lazy">
-            </div>
-            <div class="property-details">
-                <p class="property-price">12 985 000 ₽</p>
-                <button onclick="window.location.href='tanhouse1.html'" class="property-button">Подробнее</button>
-            </div>
-        </article>
-        
-        <article class="property-card">
-            <div class="property-image-container">
-                <img src="img/4ba17f88f1ee4b4b891837a8fb45b6cf.webp" 
-                     alt="Таунхаус в Калининграде" 
-                     class="property-image"
-                     width="300"
-                     height="225"
-                     loading="lazy">
-            </div>
-            <div class="property-details">
-                <p class="property-price">12 500 000 ₽</p>
-                <button onclick="window.location.href='tanhouse2.html'" class="property-button">Подробнее</button>
-            </div>
-        </article>
-        
-        <article class="property-card">
-            <div class="property-image-container">
-                <img src="img/b2bbe4e.webp" 
-                     alt="Премиальный таунхаус в Калининграде" 
-                     class="property-image"
-                     width="300"
-                     height="225"
-                     loading="lazy">
-            </div>
-            <div class="property-details">
-                <p class="property-price">22 000 000 ₽</p>
-                <button onclick="window.location.href='tanhouse3.html'" class="property-button">Подробнее</button>
-            </div>
-        </article>
+    <article class="property-card">
+      <div class="property-image-container">
+        <img src="img/16e23c2aed0d43fd8d1ae456e01abe4e.webp" 
+             alt="Таунхаус в Калининграде" 
+             class="property-image"
+             width="300"
+             height="225"
+             loading="lazy">
+      </div>
+      <div class="property-details">
+        <h3 class="property-title">Таунхаус "Элит"</h3>
+        <div class="property-info">
+          <div class="property-address">
+            <i class="bi bi-geo-alt-fill text-primary"></i>
+            <span>ул. Пулемётная, 14</span>
+          </div>
+          <div class="property-area">
+            <span>120 м²</span>
+          </div>
+        </div>
+        <p class="property-price">12 985 000 ₽</p>
+        <button onclick="window.location.href='tanhouse1.html'" class="property-button">Подробнее</button>
+      </div>
+    </article>
+    
+    <article class="property-card">
+      <div class="property-image-container">
+        <img src="img/4ba17f88f1ee4b4b891837a8fb45b6cf.webp" 
+             alt="Таунхаус в Калининграде" 
+             class="property-image"
+             width="300"
+             height="225"
+             loading="lazy">
+      </div>
+      <div class="property-details">
+        <h3 class="property-title">Таунхаус "Комфорт"</h3>
+        <div class="property-info">
+          <div class="property-address">
+            <i class="bi bi-geo-alt-fill text-primary"></i>
+            <span>ул. Поселковая, 34Г</span>
+          </div>
+          <div class="property-area">
+            <span>135 м²</span>
+          </div>
+        </div>
+        <p class="property-price">12 500 000 ₽</p>
+        <button onclick="window.location.href='tanhouse2.html'" class="property-button">Подробнее</button>
+      </div>
+    </article>
+    
+    <article class="property-card">
+      <div class="property-image-container">
+        <img src="img/b2bbe4e.webp" 
+             alt="Премиальный таунхаус в Калининграде" 
+             class="property-image"
+             width="300"
+             height="225"
+             loading="lazy">
+      </div>
+      <div class="property-details">
+        <h3 class="property-title">Таунхаус "Акцент"</h3>
+        <div class="property-info">
+          <div class="property-address">
+            <i class="bi bi-geo-alt-fill text-primary"></i>
+            <span>ул. Букетная, 32</span>
+          </div>
+          <div class="property-area">
+            <span>137 м²</span>
+          </div>
+        </div>
+        <p class="property-price">22 000 000 ₽</p>
+        <button onclick="window.location.href='tanhouse3.html'" class="property-button">Подробнее</button>
+      </div>
+    </article>
 
-        <article class="property-card">
-            <div class="property-image-container">
-                <img src="img/dbad321.webp" 
-                     alt="Премиальный таунхаус в Калининграде" 
-                     class="property-image"
-                     width="300"
-                     height="225"
-                     loading="lazy">
-            </div>
-            <div class="property-details">
-                <p class="property-price">21 000 000 ₽</p>
-                <button onclick="window.location.href='tanhouse4.html'" class="property-button">Подробнее</button>
-            </div>
-        </article>
-    </div>
+    <article class="property-card">
+      <div class="property-image-container">
+        <img src="img/dbad321.webp" 
+             alt="Премиальный таунхаус в Калининграде" 
+             class="property-image"
+             width="300"
+             height="225"
+             loading="lazy">
+      </div>
+      <div class="property-details">
+        <h3 class="property-title">Таунхаус "Чистый"</h3>
+        <div class="property-info">
+          <div class="property-address">
+            <i class="bi bi-geo-alt-fill text-primary"></i>
+            <span>ул. Полевой переулок, 6</span>
+          </div>
+          <div class="property-area">
+            <span>120 м²</span>
+          </div>
+        </div>
+        <p class="property-price">21 000 000 ₽</p>
+        <button onclick="window.location.href='tanhouse4.html'" class="property-button">Подробнее</button>
+      </div>
+    </article>
+</div>
     
     
 <div class="catalog-actions" style="display: flex; flex-direction: column; gap: 16px;">
