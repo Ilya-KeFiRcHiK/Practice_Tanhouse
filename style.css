@@ -358,7 +358,7 @@ form{
         }
 
         .feedback-section.visible{
-            bottom: 100px;
+            bottom: 100px;   
         }
 
         .feedback-form {
@@ -2136,6 +2136,7 @@ align-items: end;
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
+    align-items: center;
 }
 
 .tanhouses{
@@ -2262,7 +2263,7 @@ align-items: end;
     .footer-contacts {
         display: flex;
         justify-content: center;
-        background-color: #6864649d;
+        background-color: #fdfdfd;
         flex-wrap: wrap;
         gap: 20px;
         padding: 20px;
@@ -3348,6 +3349,10 @@ align-items: end;
     --mobile-padding: 15px;
     --mobile-gap: 12px;
   }
+
+  .feedback-section.visible{
+            bottom: 50%;   
+        }
 
   .feedback-section{
     overflow-y: scroll;
