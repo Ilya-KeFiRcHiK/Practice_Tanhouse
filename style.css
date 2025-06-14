@@ -369,7 +369,7 @@ form{
 
         .feedback-title {
            text-align: center;
-        margin-bottom: -40px;
+           padding-top: 80px;
         color: #333;
         }
 
@@ -421,7 +421,7 @@ form{
 }
 
 .bi{
-  color: #095a94;
+  color: var(--primary-color);
   font-size: 25px;
 }
 
@@ -1272,13 +1272,6 @@ h3{
   font-size: 20px;
 }
 
-h2{
-    text-align: center;
-    padding: 40px;
-    font-size: 30px;
-    color: #176297;
-}
-
 .preimyczestva-blocks{
     display: flex;
     flex-wrap: wrap;
@@ -1527,6 +1520,16 @@ h2{
 }
 
 #reviews{
+  font-size: 30px;
+  color: #176297;
+  text-align: center;
+  padding: 40px;
+}
+
+#views{
+  font-size: 30px;
+  color: #176297;
+  text-align: center;
   padding: 40px;
 }
 
@@ -1740,7 +1743,6 @@ align-items: end;
 }
 
 .contacts {
-    max-width: 800px; 
     margin: 0 auto; 
     padding: 20px;
     text-align: left; 
@@ -1790,7 +1792,7 @@ align-items: end;
     }
 
 .contacts-container {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
   margin-top: -120px;
@@ -2140,7 +2142,9 @@ align-items: end;
 }
 
 .tanhouses{
-  margin-top: -60px;
+  text-align: center;
+  padding: 20px;
+  color: #095a94;
 }
 
 .property-title {
@@ -2755,7 +2759,6 @@ align-items: end;
 }
 
   .property-card__section {
-    margin-bottom: 30px;
     padding-bottom: 20px;
     border-bottom: 1px solid #edf2f7;
   }
@@ -2767,10 +2770,11 @@ align-items: end;
   }
 
   .property-card__section-title {
-    font-size: 1.5rem;
-    color: #1a202c;
-    margin-top: -50px;
+    font-size: 20px;
+    color: #176297;
     margin-bottom: 15px;
+    text-align: center;
+    padding: 20px;
   }
 
   .property-card__section-title:before {
@@ -2790,6 +2794,7 @@ align-items: end;
 
   .property-card__feature {
     display: flex;
+    align-items: center;
     justify-content: space-between;
   }
 
@@ -2803,9 +2808,11 @@ align-items: end;
   }
 
   .property-card__subtitle {
-    font-size: 1.5rem;
+    font-size: 20px;
     font-weight: bold;
-    margin: 1.5rem 0 1rem;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
     color: black;
   }
 
@@ -2852,6 +2859,7 @@ align-items: end;
   .property-card__infrastructure-details i,
   .property-card__transport-details i {
     color: #176297;
+    text-align: center;
     list-style: none;
     padding: 0;
     margin-bottom: -20px;
@@ -3110,6 +3118,13 @@ align-items: end;
     margin: 0.5rem 0;
     color: #2d3748;
   }
+
+  .catalog-company{
+    font-size: 30px;
+  color: #176297;
+  text-align: center;
+  padding: 40px;
+  }
   
   .advantage-card__description {
     font-size: 0.9375rem;
@@ -3130,7 +3145,6 @@ align-items: end;
   --bg-color: #ffffff;
   --border-color: #e5e7eb;
   --hover-color: #1d4ed8;
-  max-width: 800px;
   margin: 0 auto;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
@@ -3192,12 +3206,19 @@ align-items: end;
 }
 
 .cta-title{
-  padding-top: 10px;
+  font-size: 30px;
+  color: #176297;
+  text-align: center;
+  padding: 40px;
 }
 
 .zayavka-text{
   margin-top: -25px;
   font-size: 20px;
+  text-align: center;
+}
+
+#catalog{
   text-align: center;
 }
 
@@ -3227,6 +3248,20 @@ align-items: end;
         min-width: 200px;
         max-width: 250px;
     }
+
+.election-tanhouse{
+  font-size: 30px;
+  color: #176297;
+  text-align: center;
+  padding: 40px;
+}
+
+.catalog-title{
+  font-size: 30px;
+  color: #176297;
+  text-align: center;
+  padding: 40px;
+}
 
 .cta-button{
   display: flex;
@@ -3450,6 +3485,10 @@ align-items: end;
     font-size: 15px;
   }
 
+  .card-img-top{
+    width: 400px;
+  }
+
   .about-section__advantages-title{
     font-size: 22px;
   }
@@ -3463,7 +3502,7 @@ align-items: end;
   }
 
   .property-card__section-title{
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .catalog-action-button{
@@ -3471,7 +3510,7 @@ align-items: end;
   }
 
   .property-card__subtitle{
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .catalog-action-button{
@@ -3862,6 +3901,10 @@ align-items: end;
   /* Отзывы */
   .reviews-section {
     padding: var(--mobile-padding);
+  }
+
+  .card-title{
+    font-size: 25px;
   }
   
   .review-card {
