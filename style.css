@@ -420,12 +420,14 @@ form{
     background-color: #45a049;
 }
 
-.bi{
-  color: var(--primary-color);
-  font-size: 25px;
+.bi-house-door{
+  color: #176297;
 }
 
-
+.bi{
+  color: #176297;
+  font-size: 25px;
+}
 
 .button-loader {
     display: none;
@@ -955,6 +957,7 @@ iframe{
     padding: 45px;
     padding-top: 0;
 }
+
 
 .election-blocks {
         display: flex;
@@ -1657,7 +1660,20 @@ h3{
 }
 
 .swiper-pagination{
-    transform: translate3d(0,8px,0) !important;
+    position: relative;
+    margin-top: 20px;
+  }
+  
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    opacity: 1;
+    margin: 0 5px !important;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: #2a5885; /* Цвет активной точки */
   }
 
 .black-1{
@@ -2173,7 +2189,7 @@ align-items: end;
   }
 
   .text-primary {
-    color: #0d6efd !important;
+    color: #176297 !important;
   }
 
 .property-address {
@@ -2477,16 +2493,6 @@ align-items: end;
     padding: 25px 0;
 }
 
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    padding: 0 20px;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
 .footer-copyright p {
     color: white;
     font-size: 14px;
@@ -2721,6 +2727,7 @@ align-items: end;
   border-radius: 10px;
     background-color: #176297;
     color: white;
+    border: none;
     font-size: 20px;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -2743,6 +2750,11 @@ align-items: end;
 .catalog-action-button.book-viewing {
   background-color: #176297;
   color: white;
+}
+
+h5{
+  color: #176297;
+  padding-top: 20px;
 }
 
 .catalog-action-button:hover {
@@ -3337,10 +3349,6 @@ align-items: end;
 @media (max-width: 1140px){
   .header-top{
     justify-content: center;
-  }
-
-  .bi{
-    height: 70px;
   }
 
   .header-address{
@@ -3947,16 +3955,26 @@ align-items: end;
     height: 24px;
     margin-top: 10px;
   }
-  
-  /* Футер */
-  .footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 15px;
-    padding: 20px var(--mobile-padding);
-  }
+
+  .container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .card-header {
+            padding: 1rem;
+        }
+        .card-body {
+            padding: 0.75rem;
+        }
+        .icon-container {
+            width: 40px;
+            height: 40px;
+            padding: 0px;
+        }
+        h4 {
+            font-size: 1.1rem !important;
+        }
+    }
   
   .footer-social {
     display: flex;
@@ -4003,7 +4021,7 @@ align-items: end;
   transition: all 0.3s ease;
    display: none !important;
   }
-}
+
 
 
   

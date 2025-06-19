@@ -106,7 +106,7 @@ require_once 'link.php';
 function getTownhouses() {
     global $conn;
     
-    $sql = "SELECT * FROM tanhouses WHERE id = 1";
+    $sql = "SELECT * FROM townhouses WHERE id = 1";
     $result = $conn->query($sql);
     
     $townhouses = [];
@@ -121,148 +121,209 @@ function getTownhouses() {
 }
 ?>
 
-    <main class="container">
-        <div class="row g-4 townhouse-container">
-            <?php
-            $townhouses = getTownhouses();
-            
-            foreach ($townhouses as $townhouse) {
-                echo '
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="card h-100">
-                        <img src="' . htmlspecialchars($townhouse['photo_path']) . '" class="card-img-top" alt="' . htmlspecialchars($townhouse['name']) . '">
-                        <div class="card-body">
-                            <h3 class="card-title">' . htmlspecialchars($townhouse['name']) . '</h3>
-                            
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="price-badge rounded-pill">' . number_format($townhouse['price'], 0, '', ' ') . ' ₽</span>
-                                <span class="badge year-badge rounded-pill">
-                                    <i class="bi bi-calendar2-check"></i> ' . htmlspecialchars($townhouse['construction_year']) . '
-                                </span>
+   <main class="container">
+    <div class="row g-4 townhouse-container">
+        <?php
+        $townhouses = getTownhouses();
+        
+        foreach ($townhouses as $townhouse) {
+            echo '
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="card h-100">
+                    <img src="' . htmlspecialchars($townhouse['photo_path']) . '" class="card-img-top" alt="' . htmlspecialchars($townhouse['name']) . '">
+                    <div class="card-body">
+                        <h3 class="card-title">' . htmlspecialchars($townhouse['name']) . '</h3>
+                        
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="price-badge rounded-pill">' . number_format($townhouse['price'], 0, '', ' ') . ' ₽</span>
+                            <span class="badge year-badge rounded-pill">
+                                <i class="bi bi-calendar2-check"></i> ' . htmlspecialchars($townhouse['construction_year']) . '
+                            </span>
+                        </div>
+                        
+                        <div class="property-feature">
+                            <p><a href="https://yandex.ru/maps/22/kaliningrad/house/pulemetnaya_ulitsa_14/ZkkYcg5mTEwOQFtufXt0dX5kYw==/?ll=20.496599%2C54.754277&z=17"><i class="bi bi-geo-alt"></i></a> ' . htmlspecialchars($townhouse['address']) . '</p>
+                        </div>
+                        
+                        <div class="row g-2 mb-3">
+                            <div class="col-6">
+                                <div class="property-feature d-flex align-items-center">
+                                    <i class="bi bi-house-door"></i>
+                                    <span>' . htmlspecialchars($townhouse['house_area']) . ' м²</span>
+                                </div>
                             </div>
-                            
-                            <div class="property-feature">
-                                <p><i class="bi bi-geo-alt"></i> ' . htmlspecialchars($townhouse['address']) . '</p>
+                            <div class="col-6">
+                                <div class="property-feature d-flex align-items-center">
+                                    <i class="bi bi-pin-map"></i>
+                                    <span>' . htmlspecialchars($townhouse['land_area']) . ' м²</span>
+                                </div>
                             </div>
-                            
-                            <div class="row g-2 mb-3">
-                                <div class="col-6">
-                                    <div class="property-feature d-flex align-items-center">
-                                        <i class="bi bi-house-door"></i>
-                                        <span>' . htmlspecialchars($townhouse['house_area']) . ' м²</span>
-                                    </div>
+                            <div class="col-6">
+                                <div class="property-feature d-flex align-items-center">
+                                    <i class="bi bi-building"></i>
+                                    <span>' . htmlspecialchars($townhouse['floors_count']) . ' этажа</span>
                                 </div>
-                                <div class="col-6">
-                                    <div class="property-feature d-flex align-items-center">
-                                        <i class="bi bi-pin-map"></i>
-                                        <span>' . htmlspecialchars($townhouse['land_area']) . ' м²</span>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="property-feature d-flex align-items-center">
-                                        <i class="bi bi-building"></i>
-                                        <span>' . htmlspecialchars($townhouse['floors_count']) . ' этажа</span>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="property-feature d-flex align-items-center">
-                                        <i class="bi bi-door-open"></i>
-                                        <span>' . htmlspecialchars($townhouse['bedrooms_count']) . ' комнаты</span>
-                                    </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="property-feature d-flex align-items-center">
+                                    <i class="bi bi-door-open"></i>
+                                    <span>' . htmlspecialchars($townhouse['bedrooms_count']) . ' комнаты</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Layout Section -->
-                    <div class="property-card__layout mt-3">
-                        <h3 class="property-card__subtitle" style="display: flex; justify-content: center;"><i class="bi bi-diagram-3"></i> Планировка</h3>
-                        <ul class="property-card__layout-list">
-                            <li class="property-card__layout-item">
-                                <span class="property-card__layout-floor"><i class="bi bi-1-circle"></i> 1 этаж:</span>
-                                <span class="property-card__layout-description">прихожая, гостевой санузел, кухня-столовая с гостиной и выходом на террасу</span>
-                            </li>
-                            <li class="property-card__layout-item">
-                                <span class="property-card__layout-floor"><i class="bi bi-2-circle"></i> 2 этаж:</span>
-                                <span class="property-card__layout-description">' . htmlspecialchars($townhouse['bedrooms_count']) . ' спальни, ванная комната</span>
-                            </li>
-                        </ul>
+                </div>
+            </div>';
+        }
+     
+// Настройки подключения к базе данных
+$host = '127.0.0.1';
+$dbname = 'townhouse';
+$username = 'root';
+$password = '';
+
+try {
+    // Подключение к базе данных
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
+    
+    // Получаем ID таунхауса из параметра URL (по умолчанию 1)
+    $townhouse_id = isset($_GET['id']) ? (int)$_GET['id'] : 1;
+    
+    // Получаем все характеристики таунхауса
+    $stmt = $pdo->prepare("SELECT * FROM townhouse_properties WHERE townhouse_id = ? ORDER BY property_type");
+    $stmt->execute([$townhouse_id]);
+    $properties = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    // Группируем характеристики по типам
+    $grouped_properties = [
+        'layout' => [],
+        'feature' => [],
+        'infrastructure' => [],
+        'transport' => []
+    ];
+    
+    foreach ($properties as $property) {
+        $grouped_properties[$property['property_type']][] = $property;
+    }
+    
+} catch (PDOException $e) {
+    die("Ошибка базы данных: " . $e->getMessage());
+}
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Характеристики таунхауса</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        .property-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: #f8f9fa;
+            border-radius: 0.5rem;
+        }
+        .property-card {
+            transition: transform 0.3s;
+            margin-bottom: 1rem;
+        }
+        .property-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .feature-icon {
+            font-size: 25px;
+            color: #176297;
+            margin-right: 0.5rem;
+        }
+
+        .catalog-action-button{
+            border:none;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container py-5">
+        <!-- Планировка -->
+        <?php if (!empty($grouped_properties['layout'])): ?>
+        <div class="property-section">
+            <h2 class="mb-4"><i class="bi bi-house-door feature-icon"></i> Планировка</h2>
+            <div class="row">
+                <?php foreach ($grouped_properties['layout'] as $layout): ?>
+                <div class="col-md-6">
+                    <div class="property-card card">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= htmlspecialchars($layout['title']) ?></h5>
+                            <p class="card-text"><?= htmlspecialchars($layout['description']) ?></p>
+                        </div>
                     </div>
-                </div>';
-            }
-            ?>
-
-            <section class="property-card__section" itemprop="amenityFeature">
-    <h2 class="property-card__section-title">
-      <i class="bi bi-stars"></i> Особенности
-    </h2>
-    <ul class="property-card__specs-list">
-      <li class="property-card__specs-item">
-        <i class="bi bi-check-circle property-card__specs-icon"></i>
-        <span itemprop="description">Газовое автономное отопление</span>  
-      </li>
-      <li class="property-card__specs-item">
-        <i class="bi bi-check-circle property-card__specs-icon"></i>
-        <span itemprop="description">Водоснабжение, ливневая канализация</span>
-      </li>
-      <li class="property-card__specs-item">
-        <i class="bi bi-check-circle property-card__specs-icon"></i>
-        <span itemprop="description">Система теплого пола</span>
-      </li>
-      <li class="property-card__specs-item">
-        <i class="bi bi-check-circle property-card__specs-icon"></i>
-        <span itemprop="description">Монолитная межэтажная лестница</span>
-      </li>
-      <li class="property-card__specs-item">
-        <i class="bi bi-check-circle property-card__specs-icon"></i>
-        <span itemprop="description">Внутридомовая разводка всех коммуникаций</span>
-      </li>
-      <li class="property-card__specs-item">
-        <i class="bi bi-check-circle property-card__specs-icon"></i>
-        <span itemprop="description">Входная дверь с защитой от взлома</span>
-      </li>
-      <li class="property-card__specs-item">
-        <i class="bi bi-check-circle property-card__specs-icon"></i>
-        <span itemprop="description">Тёплые пятикамерные стеклопакеты</span>
-      </li>
-    </ul>
-  </section>
-
-  <section class="property-card__section">
-    <h2 class="property-card__section-title">
-      <i class="bi bi-building-add"></i> Инфраструктура
-    </h2>
-    <ul class="property-card__infrastructure-list">
-      <li class="property-card__infrastructure-item" itemprop="nearbyAmenities">
-        <div class="property-card__infrastructure-details">
-          <div><i class="bi bi-mortarboard"></i> Новая школа №59</div>
-          <div><i class="bi bi-people"></i> Kidsberg (Детский город профессий)</div>
-          <div><i class="bi bi-water"></i> Спортзал с бассейном (Альбатрос север)</div>
-          <div><i class="bi bi-activity"></i> Спортзал "Profitness - Согласия"</div>
-          <div><i class="bi bi-tree"></i> Парк Макса Ашмана</div>
-          <div><i class="bi bi-shop"></i> Супермаркеты, магазины, кофейни</div>
+                </div>
+                <?php endforeach; ?>
+            </div>
         </div>
-      </li>
-    </ul>
-  </section>
-
-  <section class="property-card__section">
-    <h2 class="property-card__section-title">
-      <i class="bi bi-bus-front"></i> Транспортная доступность
-    </h2>
-    <ul class="property-card__transport-list">
-      <li class="property-card__transport-item" itemprop="publicTransportAccess">
-        <div class="property-card__transport-details">
-          <i class="bi bi-bus"></i> Маршрутка №82
+        <?php endif; ?>
+        
+        <!-- Особенности -->
+        <?php if (!empty($grouped_properties['feature'])): ?>
+        <div class="property-section">
+            <h2 class="mb-4"><i class="bi bi-star feature-icon"></i> Особенности</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="list-group">
+                        <?php foreach ($grouped_properties['feature'] as $feature): ?>
+                        <li class="list-group-item">
+                            <h5><?= htmlspecialchars($feature['title']) ?></h5>
+                            <p><?= htmlspecialchars($feature['description']) ?></p>
+                        </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </li>
-      <li class="property-card__transport-item" itemprop="publicTransportAccess">
-        <div class="property-card__transport-details">
-          <i class="bi bi-bus"></i> Автобусы №10, №7, №30
+        <?php endif; ?>
+        
+        <!-- Инфраструктура -->
+        <?php if (!empty($grouped_properties['infrastructure'])): ?>
+        <div class="property-section">
+            <h2 class="mb-4"><i class="bi bi-shop feature-icon"></i> Инфраструктура</h2>
+            <div class="row">
+                <?php foreach ($grouped_properties['infrastructure'] as $infra): ?>
+                <div class="col-md-6 col-lg-4">
+                    <div class="property-card card">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= htmlspecialchars($infra['title']) ?></h5>
+                            <p class="card-text"><?= htmlspecialchars($infra['description']) ?></p>
+                        </div>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
         </div>
-      </li>
-    </ul>
-  </section>
+        <?php endif; ?>
+        
+        <!-- Транспортная доступность -->
+        <?php if (!empty($grouped_properties['transport'])): ?>
+        <div class="property-section">
+            <h2 class="mb-4"><i class="bi bi-bus-front feature-icon"></i> Транспортная доступность</h2>
+            <div class="row">
+                <?php foreach ($grouped_properties['transport'] as $transport): ?>
+                <div class="col-md-6">
+                    <div class="property-card card">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= htmlspecialchars($transport['title']) ?></h5>
+                            <p class="card-text"><?= htmlspecialchars($transport['description']) ?></p>
+                        </div>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        <?php endif; ?>
+    </div>
 </article>
 </div>
 
@@ -279,7 +340,9 @@ function getTownhouses() {
             color: #212529;
         }
         
-        
+        .mb-4{
+            font-size:25px;
+        }
         
         .header-title {
             font-weight: 700;
@@ -300,13 +363,13 @@ function getTownhouses() {
             border-radius: 12px;
             overflow: hidden;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.5);
             margin-bottom: 2rem;
         }
         
         .card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
         
         .card-img-top {
@@ -352,17 +415,13 @@ function getTownhouses() {
             margin-right: 0.5rem;
             color: #127297;
         }
-
-        .catalog-action-button{
-            margin-top: -20px;
-        }
         
         .property-card__layout {
             background-color: white;
             border-radius: 12px;
             padding: 1.5rem;
             margin-top: 1.5rem;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
         
         .property-card__subtitle {
@@ -425,44 +484,111 @@ function getTownhouses() {
             padding: 3rem 0;
             margin-top: 4rem;
         }
+
+        @media(max-width: 640px){
+            .card-title{
+                font-size: 20px;
+            }
+
+            .mb-4{
+                font-size: 20px;
+            }
+        }
 </style>
 
     </div>
 
+    <?php
+// Подключение к базе данных
+$db = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
 
-<section id="reviews" class="reviews-section-tanhouse">
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="review-card">
-          <img src="img/white-house1.svg" alt="Фото таунхауса" class="property-photo">
+// Получаем фотографии для конкретного tanhouse_id (в примере используется 1)
+$tanhouse_id = 1;
+$query = $db->prepare("SELECT * FROM additional_photos WHERE townhouse_id = :townhouse_id ORDER BY sort_order");
+$query->execute([':townhouse_id' => $townhouse_id]);
+$photos = $query->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper Carousel</title>
+    <!-- Подключаем Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        .swiper-container {
+            width: 100%;
+            height: 400px;
+        }
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .swiper-slide img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <!-- Slider main container -->
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <?php foreach ($photos as $photo): ?>
+                <div class="swiper-slide">
+                    <img src="<?php echo htmlspecialchars($photo['photo_path']); ?>" alt="Photo <?php echo $photo['id']; ?>">
+                </div>
+            <?php endforeach; ?>
         </div>
-      </div>
-      
-      <div class="swiper-slide">
-        <div class="review-card">
-          <img src="img/Rectangle 1.svg" alt="Фото таунхауса" class="property-photo">
-        </div>
-      </div>
-      
-      <div class="swiper-slide">
-        <div class="review-card">
-          <img src="img/Rectangle 1 (3).svg" alt="Фото таунхауса" class="property-photo">
-        </div>
-      </div>
-      
-      <div class="swiper-slide">
-        <div class="review-card">
-          <img src="img/Rectangle 1 (4).svg" alt="Фото таунхауса" class="property-photo">
-        </div>
-      </div>
+        
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
     </div>
-    
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
-  </div>
-</section>
+
+    <!-- Подключаем Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Инициализация Swiper
+        var mySwiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            loop: true,
+            autoplay: {
+                delay: 3000,
+            },
+            
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+</body>
+</html>
 
 <div class="catalog-actions">
     <button class="catalog-action-button book-viewing" id="feedbackTanhouseBtn">Записаться на просмотр</button>
@@ -564,6 +690,10 @@ function getTownhouses() {
 <script src="script.js"></script>
 <script>
     var swiper = new Swiper(".mySwiper", {
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: true
+        },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -792,3 +922,4 @@ document.addEventListener('DOMContentLoaded', function() {
 </html>
 </body>
 </html>
+<?php

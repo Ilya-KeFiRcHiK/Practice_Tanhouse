@@ -331,9 +331,11 @@
           </section>
 
 <h2 id="views">Отзывы клиентов</h2>
-    <section class="reviews-section">
+
+<section class="reviews-section">
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
+      <!-- Ваши слайды остаются без изменений -->
       <div class="swiper-slide">
         <div class="review-card">
           <img src="img/6ed89b37c942b597b9887b19c73da8a8.jpg" alt="Алексей Смирнов" class="review-avatar">
@@ -383,6 +385,10 @@
       </div>
     </div>
     
+    <!-- Добавляем пагинацию -->
+    <div class="swiper-pagination"></div>
+    
+    <!-- Кнопки навигации -->
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
   </div>
@@ -453,25 +459,25 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="svazat.js"></script>
 <script>
-    var swiper = new Swiper(".mySwiper", {
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
 
-    document.querySelector("#menu-toggle").addEventListener("click", function(e){
-    const menuList = document.querySelector(".menu-list");
-    if (menuList.classList.contains('show')) {
-        menuList.classList.remove("show");
-    } else {
-        menuList.classList.add("show");
-    }
-});
+  var swiper = new Swiper(".mySwiper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true, // позволяет переходить по слайдам при клике на точки
+      type: "bullets", // тип пагинации (точки)
+      dynamicBullets: false, // можно включить для динамического изменения размера активной точки
+    },
+    // Дополнительные параметры для лучшего отображения
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true, // бесконечный цикл
+  });
 
 
-
-  
     document.addEventListener('DOMContentLoaded', () => {
     const formContainer = document.getElementById('feedbackFormContainer');
     if (!formContainer) return console.error('Form container not found!');
@@ -505,6 +511,15 @@
             !/^[a-zA-Zа-яА-ЯёЁ\s]+$/.test(value) ? 'Только буквы разрешены' : 'Максимум 12 символов';
         nameInput.style.borderColor = isValid ? '#ddd' : 'red';
     });
+});
+
+document.querySelector("#menu-toggle").addEventListener("click", function(e){
+    const menuList = document.querySelector(".menu-list");
+    if (menuList.classList.contains('show')) {
+        menuList.classList.remove("show");
+    } else {
+        menuList.classList.add("show");
+    }
 });
 
 const title = document.getElementById('title');
